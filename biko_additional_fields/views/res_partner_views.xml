@@ -1,0 +1,82 @@
+<odoo>
+
+    <record id="qdes_res_partner_view_form1" model="ir.ui.view">
+        <field name="name">res.partner.form.inherit.qdes</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//*/h1[1]" position="after">
+                <field name = "inner_name" attrs="{'invisible': [('is_company', '=', False)], 'required' : [('is_company', '=', True)]}"
+                       placeholder="Inner name"/>
+            </xpath>
+            <xpath expr="//*/field[@name='website']" position="before">
+                <field name="email2" string="Email (add.)" widget="email" context="{'gravatar_image': True}"/>
+                <field name="telegram"/>
+                <field name="skype"/>
+            </xpath>
+            <xpath expr="//*/field[@name='active_lang_count']" position="before">
+                <field name="industry_id" attrs="{'invisible': [('is_company', '=', False)], 'required' : [('is_company', '=', True)]}"
+                       options="{'no_create': True}"/>
+            </xpath>
+            <xpath expr="//*/field[@name='category_id']" position="after">
+                <field name = "software_ids" attrs="{'invisible': [('is_company', '=', False)], 'required' : [('is_company', '=', True)]}"
+                       widget="many2many_tags" options="{'color_field': 'color', 'no_create_edit': True}"
+                       placeholder="Software"/>
+            </xpath>
+            <xpath expr="//*/field[@name='vat']" position="after">
+                <field name = "source_id" attrs="{'invisible': [('is_company', '=', False)], 'required' : [('is_company', '=', True)]}"/>
+                <field name = "recomendator_id" attrs="{'invisible': [('is_company', '=', False)]}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="biko_res_partner_view_search" model="ir.ui.view">
+        <field name="name">biko.res.partner.view.search.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <search>
+                <searchpanel>
+                    <field name="industry_id" string="Industry" enable_counters="1"/>
+                    <field name="category_id" select="multi"/>
+                    <field name="software_ids" select="multi"/>
+                </searchpanel>
+            </search>
+        </field>
+    </record>
+
+    <record id="biko_res_partner_tree" model="ir.ui.view">
+        <field name="name">biko.res.partner.view.tree.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//*/field[@name='active']" position="after">
+                <field name="software_ids" string = "Software" optional="hide" widget="many2many_tags" options="{'color_field': 'color'}"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="biko_action_companies_list" model="ir.actions.act_window">
+        <field name="name">Companies</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">tree,kanban,form,activity</field>
+        <field name="search_view_id" ref="base.view_res_partner_filter"/>
+        <field name="context">{'default_is_company': True}</field>
+        <field name="domain">[('is_company', '=', True)]</field>
+        <field name="help" type="html">
+          <p class="o_view_nocontent_smiling_face">
+            Create a contact in your address book
+          </p><p>
+            Odoo helps you to easily track all activities related to a customer.
+          </p>
+        </field>
+    </record>
+
+    <record id="contacts.action_contacts" model="ir.actions.act_window">
+        <field name="context">{'default_is_company': False, 'search_default_group_company': 1}</field>
+        <field name="domain">[('is_company', '=', False)]</field>
+        <field name="view_mode">tree,kanban,form,activity</field>
+    </record>
+
+</odoo>

@@ -1,0 +1,22 @@
+<odoo>
+    <menuitem id="menu_biko_additional_info"
+        name="Additional Information"
+        sequence="99" parent="contacts.res_partner_menu_config"/>
+
+    <menuitem id="menu_biko_software"
+        name="Software"
+        action="biko_software_action_tree"
+        sequence="1" parent="menu_biko_additional_info"/>
+
+    <menuitem id="menu_biko_source"
+        name="Sources"
+        action="biko_source_action_tree"
+        sequence="1" parent="menu_biko_additional_info"/>
+
+    <menuitem id="biko_res_partner_menu_companies"
+        name="Companies"
+        action="biko_action_companies_list"
+        parent="contacts.menu_contacts"
+        sequence="1"/>
+
+</odoo>

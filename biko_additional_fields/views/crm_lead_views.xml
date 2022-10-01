@@ -1,0 +1,41 @@
+<odoo>
+
+    <record id="crm_lead_view_form_biko_inherited1" model="ir.ui.view">
+        <field name="name">crm.lead.form.biko.inherited1</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//*/field[@name='lost_reason']" position="after">
+                <field name="lost_reason_comment" attrs="{'invisible': [('active', '=', True)]}"/>
+            </xpath>
+            <xpath expr="//*/page[@name='lead']//field[@name='campaign_id']" position="before">
+                <field name="inner_source_id"/>
+            </xpath>
+            <xpath expr="//*/page[@name='lead']//field[@name='campaign_id']" position="replace">
+                <field name="campaign_id" string="Campaign (UTM)" />
+            </xpath>
+            <xpath expr="//*/page[@name='lead']//field[@name='medium_id']" position="replace">
+                <field name="medium_id" string="Medium (UTM)" />
+            </xpath>
+            <xpath expr="//*/page[@name='lead']//field[@name='source_id']" position="replace">
+                <field name="source_id" string="Source (UTM)" />
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_case_tree_view_oppor_biko_inherited1" model="ir.ui.view">
+        <field name="name">crm.lead.tree.opportunity.biko.inherited1</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_case_tree_view_oppor"/>
+        <field name="priority">1</field>
+        <field name="arch" type="xml">
+            <xpath expr="//*/field[@name='campaign_id']" position="after">
+                <field name="inner_source_id" optional="show"/>
+            </xpath>
+            <xpath expr="//*/field[@name='stage_id']" position="after">
+                <field name="lost_reason_comment" optional="show"/>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
