@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<templates xml:space="preserve">-->
+<!--    <xpath expr="//t[@name='reconciliation.line']/thead/td[@class='cell_label']" position="after">-->
+<!--        <td class="cell_label"><t t-if="state.st_line.sender_account" t-esc="state.st_line.sender_account"/></td>-->
+<!--        <td class="cell_label"><t t-if="state.st_line.beneficiary_account" t-esc="state.st_line.beneficiary_account"/></td>-->
+<!--    </xpath>-->
+<!--     <xpath expr="//t[@name='reconciliation.line.mv_line.details']/tr[8]" position="after">-->
+<!--         <td class="cell_label">-->
+<!--        <t t-esc="line.sender_account"/>-->
+<!--         </td>-->
+<!--         <td class="cell_label">-->
+<!--        <t t-esc="line.beneficiary_account"/>-->
+<!--         </td>-->
+<!--    </xpath>-->
+<!--    <xpath expr="//t[7]/tr[8]" position="after">-->
+<!--        <tr><td>Sender's account</td><td><t t-esc="line.sender_account"/></td></tr>-->
+<!--        <tr><td>Beneficiary's account</td><td><t t-esc="line.beneficiary_account"/></td></tr>-->
+<!--    </xpath>-->
+<!--    <xpath expr="//t[8]/tr[5]" position="after">-->
+<!--        <tr><td>Sender's account</td><td><t t-esc="line.sender_account"/></td></tr>-->
+<!--        <tr><td>Beneficiary's account</td><td><t t-esc="line.beneficiary_account"/></td></tr>-->
+<!--    </xpath>-->
+<!--</templates>-->
