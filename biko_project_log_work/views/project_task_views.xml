@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_task_form_biko_log_work_inherit" model="ir.ui.view">
+        <field name="name">project.task.inherit.biko.log.work.inherit</field>
+        <field name="model">project.task</field>
+        <field name="inherit_id" ref="project.view_task_form2"/>
+        <field name="arch" type="xml">
+            <field name="allow_timesheets" invisible="1"/>
+            <button name="action_assign_to_me" position="after">
+                <button name="%(biko_project_log_work.action_biko_log_work)d" string="Log work"
+                    type="action" class="oe_highlight" context="{'default_task_id': active_id}"
+                    attrs="{'invisible': [('allow_timesheets', '=', False)]}"/>
+            </button>
+        </field>
+    </record>
+</odoo>

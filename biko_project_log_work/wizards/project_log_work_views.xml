@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="biko_log_work_view_form" model="ir.ui.view">
+        <field name="name">biko.log.work.form</field>
+        <field name="model">project.task.log.work</field>
+        <field name="arch" type="xml">
+            <form string="Log work">
+                <group name="date_time" string="Log work">
+                    <field name="date" string="Date"/>
+                    <field name="log_time" string="Time" widget="timesheet_uom" decoration-danger="log_time &gt; 24"/>
+                    <field name="user_id" invisible="1"/>
+                    <field name="employee_id" string="Employee" widget="many2one_avatar_employee" context="{'active_test': True}"/>
+                    <field name="comment" string="Short comment"/>
+                </group>
+                <label for="description" string="Description"/>
+                <field name="description" type="html"/>
+                <footer>
+                    <button name="action_log_work_apply" string="Submit" type="object" class="btn-primary"/>
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_biko_log_work" model="ir.actions.act_window">
+        <field name="name">Log work</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">project.task.log.work</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="biko_log_work_view_form"/>
+        <field name="target">new</field>
+    </record>
+
+</odoo>
