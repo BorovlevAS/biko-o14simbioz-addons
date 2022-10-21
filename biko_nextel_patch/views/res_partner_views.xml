@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_partners_form_crm_calls_inherit_biko" model="ir.ui.view">
+        <field name="name">view.res.partner.form.crm.inherited.calls.biko</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="crm_phonecall.view_partners_form_crm_calls_inherit" />
+        <field name="arch" type="xml">
+            <xpath expr="//*/button[@icon='fa-phone']" position="replace">
+                <button
+                    class="oe_stat_button"
+                    context="{'search_default_partner_id': active_id}"
+                    icon="fa-phone"
+                    name="%(nextel.nextel_crm_phonecall_action)d"
+                    type="action"
+                >
+                    <field name="phonecall_count" string="Calls" widget="statinfo" />
+                </button>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>

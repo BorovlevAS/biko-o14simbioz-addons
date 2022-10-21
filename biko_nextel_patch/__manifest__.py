@@ -4,8 +4,9 @@
     'version': '14.0.1.1.0',
     'author': 'Borovlev A.S.',
     'company': 'BIKO Solutions',
-    "depends": ['phone_validation_extra', 'nextel'],
+    "depends": ['phone_validation_extra', 'nextel', 'crm_phonecall'],
     "data": [
+        'views/res_partner_views.xml'
     ],
     
     'license': 'LGPL-3',

@@ -27,8 +27,17 @@ class BIKONextelController(http.Controller):
             'nextel_source': call_data['source'],
             'call_event': data['event'],
         }
+        
+        client_phone = call_data['to'][0] if len(call_data['to']) > 0 else ''
+
         phonecall_env = request.env['crm.phonecall'].sudo()
-        phone_formatted = phonecall_env.phone_format(call_data['from'])
+        if new_call_vals['direction'] == 'in':
+            phone_formatted = phonecall_env.phone_format(call_data['from'])
+        else:
+            phone_formatted = phonecall_env.phone_format(client_phone)
+            new_call_vals['partner_phone'] = client_phone
+            new_call_vals['partner_mobile'] = client_phone
+        
         domain = [
             '|',
             '|',
