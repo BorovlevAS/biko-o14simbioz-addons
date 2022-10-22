@@ -34,18 +34,17 @@ class BIKONextelController(http.Controller):
 
         if new_call_vals['direction'] == 'in':
             phone_formatted = phonecall_env.phone_format(call_data['from'])
-            # op_num = call_data['to'][0] if len(call_data['to']) > 0 else ''
+            op_num = call_data['to'][0] if len(call_data['to']) > 0 else ''
         else:
             phone_formatted = phonecall_env.phone_format(client_phone)
             new_call_vals['partner_phone'] = client_phone
             new_call_vals['partner_mobile'] = client_phone
-            # op_num = call_data['from']
+            op_num = call_data['from']
 
-        # TODO: need to add user for phonecall
         # find user by Operator ID in nextel operators
-        # op_id = request.env['nextel.operator'].sudo().search([('nextel_employee_number', '=', op_num)], limit=1)
-        # user_id = op_id.user_id.id if op_id else None
-        # new_call_vals['user_id'] = user_id
+        op_id = request.env['nextel.operator'].sudo().search([('nextel_employee_number', '=', op_num)], limit=1)
+        user_id = op_id.user_id.id if op_id else None
+        new_call_vals['user_id'] = user_id
         
         domain = [
             '|',
@@ -106,6 +105,11 @@ class BIKONextelController(http.Controller):
                 notifications = [(operator.user_id.channel_phonecall_update, bus_message)]
                 _logger.info('Sent notify: %s', notifications)
                 request.env['bus.bus'].sendmany(notifications)
+            
+            if operator:
+                phonecall.update({
+                    'user_id': operator.user_id
+                })
 
         _logger.info('\n\n\n*************   nextel_call_answer  END **********************\n')
         return json.dumps({'status': 'success'})

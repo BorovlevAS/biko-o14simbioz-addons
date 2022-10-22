@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="assets_backend" name="biko calltab patch assets" inherit_id="web.assets_backend">
+        <xpath expr="." position="inside">
+
+            <script type="text/javascript" src="/biko_nextel_patch/static/src/js/call_tab_patch.js"/>
+
+        </xpath>
+    </template>
+
+</odoo>
