@@ -20,4 +20,33 @@
         </field>
     </record>
 
+    <record id="search_res_partner_filter_biko_dev_8" model="ir.ui.view">
+        <field name="name">search.res_partner_filter.biko_dev_8</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_res_partner_filter"/>
+        <field name="arch" type="xml">
+            <xpath expr="//./field[@name='phone']" position="replace">
+                <field name="phone" 
+                    filter_domain="['|', '|', '|', 
+                        ('phone', 'ilike', self), 
+                        ('mobile', 'ilike', self), 
+                        ('biko_phone_e164', 'ilike', self), 
+                        ('biko_mobile_e164', 'ilike', self)
+                    ]"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="biko_dev_8_res_partner_tree" model="ir.ui.view">
+        <field name="name">biko_dev_8.res.partner.view.tree.inherit</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_tree"/>
+        <field name="arch" type="xml">
+            <xpath expr="//*/field[@name='phone']" position="after">
+                <field name="biko_phone_e164" string="Phone (E164)" class="o_force_ltr" optional="hide"/>
+                <field name="biko_mobile_e164" string="Mobile (E164)" class="o_force_ltr" optional="hide"/>
+            </xpath>
+        </field>
+    </record>
+
 </odoo>

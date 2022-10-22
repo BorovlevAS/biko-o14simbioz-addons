@@ -1,12 +1,12 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "QDES: additional fields",
+    'name': "BIKO: additional fields",
     'description': """Adding fields, changing views""",
     "summary": """
         Добавлены новые поля в контакты и справочники - программы, источники для контактов
         Немного обновил пункты меню для контактов и компаний
     """,
-    'version': '15.0.1.1.0',
+    'version': '14.0.1.1.3',
     'author': 'Borovlev AS',
     'company': 'BIKO',
     "depends": ['base', 'contacts', 'crm'],
