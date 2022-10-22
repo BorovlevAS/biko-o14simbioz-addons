@@ -53,6 +53,9 @@
             <xpath expr="//*/field[@name='active']" position="after">
                 <field name="software_ids" string = "Software" optional="hide" widget="many2many_tags" options="{'color_field': 'color'}"/>
             </xpath>
+            <xpath expr="//*/field[@name='phone']" position="after">
+                <field name="mobile" class="o_force_ltr" optional="show"/>
+            </xpath>
         </field>
     </record>
 
