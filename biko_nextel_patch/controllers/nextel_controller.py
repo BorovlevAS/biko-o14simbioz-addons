@@ -69,3 +69,43 @@ class BIKONextelController(http.Controller):
 
         _logger.info('\n\n\n*************   nextel_new_call  END **********************\n')
         return json.dumps({'status': 'success', 'phonecall_id': phonecall.id})
+
+    @http.route('/nextel/call/answer', type='json', auth='none', methods=['GET', 'POST'], csrf=False)
+    def nextel_call_answer(self):
+        _logger.info('\n\n\n*************   nextel_call_answer  START **********************\n')
+        data = request.jsonrequest
+        call_data = data['call']
+        _logger.info('data: %s', json.dumps(data, indent=4, sort_keys=True))
+
+        # update crm.phonecall by call_id
+        phonecall = request.env['crm.phonecall'].sudo().search([('call_id', '=', call_data['id'])], limit=1)
+        phonecall.update({
+            'nextel_state': call_data['state'],
+            'call_event': data['event'],
+        })
+
+        # notify operator
+        if call_data['direction'].upper() == 'IN':
+            nextel_operator_domain = [
+                ('nextel_employee_number', 'in', call_data['to']),
+                ('user_id', '!=', False)
+            ]
+        else:
+            nextel_operator_domain = [
+                ('nextel_employee_number', '=', call_data['from']),
+                ('user_id', '!=', False)
+            ]
+        
+        _logger.info('NextelOperator search nextel_operator_domain: %s', nextel_operator_domain)
+        notify_operators = request.env['nextel.operator'].sudo().search(nextel_operator_domain)
+        if notify_operators:
+            for operator in notify_operators:
+                bus_message = {
+                    'call_event': phonecall.call_event,
+                }
+                notifications = [(operator.user_id.channel_phonecall_update, bus_message)]
+                _logger.info('Sent notify: %s', notifications)
+                request.env['bus.bus'].sendmany(notifications)
+
+        _logger.info('\n\n\n*************   nextel_call_answer  END **********************\n')
+        return json.dumps({'status': 'success'})
