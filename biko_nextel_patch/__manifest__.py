@@ -6,7 +6,8 @@
     'company': 'BIKO Solutions',
     "depends": ['phone_validation_extra', 'nextel', 'crm_phonecall'],
     "data": [
-        'views/res_partner_views.xml'
+        'views/res_partner_views.xml',
+        'views/crm_phonecall.xml'
     ],
     
     'license': 'LGPL-3',

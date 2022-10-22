@@ -31,12 +31,21 @@ class BIKONextelController(http.Controller):
         client_phone = call_data['to'][0] if len(call_data['to']) > 0 else ''
 
         phonecall_env = request.env['crm.phonecall'].sudo()
+
         if new_call_vals['direction'] == 'in':
             phone_formatted = phonecall_env.phone_format(call_data['from'])
+            # op_num = call_data['to'][0] if len(call_data['to']) > 0 else ''
         else:
             phone_formatted = phonecall_env.phone_format(client_phone)
             new_call_vals['partner_phone'] = client_phone
             new_call_vals['partner_mobile'] = client_phone
+            # op_num = call_data['from']
+
+        # TODO: need to add user for phonecall
+        # find user by Operator ID in nextel operators
+        # op_id = request.env['nextel.operator'].sudo().search([('nextel_employee_number', '=', op_num)], limit=1)
+        # user_id = op_id.user_id.id if op_id else None
+        # new_call_vals['user_id'] = user_id
         
         domain = [
             '|',
