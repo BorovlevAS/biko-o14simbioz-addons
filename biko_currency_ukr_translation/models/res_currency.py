@@ -22,7 +22,7 @@ class Currency(models.Model):
             str_two = self.biko_cent_str_two if self.biko_cent_str_two else self.currency_subunit_label
             str_five = self.biko_cent_str_five if self.biko_cent_str_five else self.currency_subunit_label
 
-        return {str_one, str_two, str_five}
+        return (str_one, str_two, str_five)
 
     def biko_get_currency_name(self, sum, cents):
         
