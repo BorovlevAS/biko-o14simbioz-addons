@@ -31,60 +31,6 @@ class SaleOrder(models.Model):
     kw_partner_invoice_id = fields.Many2one(
         comodel_name='res.partner', compute='_compute_kw_partner_invoice_id', )
 
-    def get_currency_name(self, sum, currency_id):
-        if currency_id.currency_unit_label == 'Euros':
-            str_one = 'євро'
-            str_two = 'євро'
-            str_five = 'євро'
-        elif currency_id.currency_unit_label == 'Dollars':
-            str_one = 'долар'
-            str_two = 'долари'
-            str_five = 'доларів'
-        elif currency_id.currency_unit_label == 'Hryvnia':
-            str_one = 'гривна'
-            str_two = 'гривні'
-            str_five = 'гривень'
-        else:
-            str_one = currency_id.currency_unit_label
-            str_two = currency_id.currency_unit_label
-            str_five = currency_id.currency_unit_label
-
-        last_num = int(repr(sum)[-1])
-
-        if last_num == 1:
-            return str_one
-        elif last_num > 1 and last_num < 5:
-            return str_two
-        else:
-            return str_five
-
-    def get_currency_cent_name(self, sum, currency_id):
-        if currency_id.currency_unit_label == 'Euros':
-            str_one = 'цент'
-            str_two = 'центи'
-            str_five = 'центів'
-        elif currency_id.currency_unit_label == 'Dollars':
-            str_one = 'цент'
-            str_two = 'центи'
-            str_five = 'центів'
-        elif currency_id.currency_unit_label == 'Hryvnia':
-            str_one = 'копійка'
-            str_two = 'копійки'
-            str_five = 'копійок'
-        else:
-            str_one = currency_id.currency_subunit_label
-            str_two = currency_id.currency_subunit_label
-            str_five = currency_id.currency_subunit_label
-
-        last_num = int(repr(sum)[-1])
-
-        if last_num == 1:
-            return str_one
-        elif last_num > 1 and last_num < 5:
-            return str_two
-        else:
-            return str_five
-
     def _compute_kw_partner_invoice_id(self):
         for obj in self:
             if hasattr(obj, 'partner_invoice_id') and \
@@ -98,34 +44,34 @@ class SaleOrder(models.Model):
         for obj in self:
             obj.kw_amount_ukr_text = '{} {} {:0>2} {}'.format(
                 num2words(int(obj.amount_total), lang='uk'),
-                self.get_currency_name(obj.amount_tax, obj.currency_id),
+                self.kw_currency_name,
                 round(100 * (obj.amount_total - int(obj.amount_total))),
-                self.get_currency_cent_name(round(100 * (obj.amount_total - int(obj.amount_total))), obj.currency_id),
+                self.kw_currency_cent_name,
             ).capitalize()
 
     def _compute_kw_taxed_ukr_text(self):
         for obj in self:
             obj.kw_taxed_ukr_text = '{} {} {:0>2} {}'.format(
                 num2words(int(obj.amount_tax), lang='uk'),
-                self.get_currency_name(obj.amount_tax, obj.currency_id),
+                self.kw_currency_name,
                 round(100 * (obj.amount_tax - int(obj.amount_tax))),
-                self.get_currency_cent_name(round(100 * (obj.amount_tax - int(obj.amount_tax))), obj.currency_id),
+                self.kw_currency_cent_name,
             ).capitalize()
 
     def _compute_kw_amount_untaxed_ukr_text(self):
         for obj in self:
             obj.kw_amount_untaxed_ukr_text = '{} {} {:0>2} {}'.format(
                 num2words(int(obj.amount_untaxed), lang='uk'),
-                self.get_currency_name(obj.amount_tax, obj.currency_id),
+                self.kw_currency_name,
                 round(100 * (obj.amount_untaxed - int(obj.amount_untaxed))),
-                self.get_currency_cent_name(round(100 * (obj.amount_untaxed - int(obj.amount_untaxed))), obj.currency_id),
+                self.kw_currency_cent_name,
             ).capitalize()
 
     def _compute_kw_currency_name(self):
         for obj in self:
             if obj.currency_id.currency_unit_label == 'Euros':
-                self.kw_currency_name = 'євро'
-                self.kw_currency_cent_name = 'цент'
+                self.kw_currency_name = 'EUR'
+                self.kw_currency_cent_name = 'cent'
             elif obj.currency_id.currency_unit_label == 'Dollars':
                 self.kw_currency_name = 'USD'
                 self.kw_currency_cent_name = 'cent'

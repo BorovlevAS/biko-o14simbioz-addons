@@ -1,10 +1,9 @@
-<?xml version="1.0" encoding="utf-8"?>
 <odoo>
 
     <record id="view_currency_form_biko_currency_inherit" model="ir.ui.view">
         <field name="name">res.currency.form.biko.currency.inherit</field>
         <field name="model">res.currency</field>
-        <field name="inherit_id" res="base.view_currency_form"/>
+        <field name="inherit_id" ref="base.view_currency_form"/>
         <field name="arch" type="xml">
             <xpath expr="//*/group[@groups='base.group_no_one']" position="after">
                 <group name="biko_num2words" string="Number spelling">
@@ -24,15 +23,3 @@
     </record>
 
 </odoo>
-
-<!-- <group groups="base.group_no_one">
-                            <group string="Price Accuracy">
-                                <field name="rounding"/>
-                                <field name="decimal_places"/>
-                            </group>
-
-                            <group string="Display">
-                                <field name="symbol"/>
-                                <field name="position"/>
-                            </group>
-                        </group> -->
