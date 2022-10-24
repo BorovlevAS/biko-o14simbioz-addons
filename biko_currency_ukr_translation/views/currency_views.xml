@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="view_currency_form_biko_currency_inherit" model="ir.ui.view">
+        <field name="name">res.currency.form.biko.currency.inherit</field>
+        <field name="model">res.currency</field>
+        <field name="inherit_id" res="base.view_currency_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//*/group[@groups='base.group_no_one']" position="after">
+                <group name="biko_num2words" string="Number spelling">
+                    <group name="biko_int" string="Integer part" col="6">
+                        <field name="biko_str_one"/>
+                        <field name="biko_str_two"/>
+                        <field name="biko_str_five"/>
+                    </group>
+                    <group name="biko_int" string="Float part" col="6">
+                        <field name="biko_cent_str_one"/>
+                        <field name="biko_cent_str_two"/>
+                        <field name="biko_cent_str_five"/>
+                    </group>
+                </group>
+            </xpath>
+        </field>
+    </record>
+
+</odoo>
+
+<!-- <group groups="base.group_no_one">
+                            <group string="Price Accuracy">
+                                <field name="rounding"/>
+                                <field name="decimal_places"/>
+                            </group>
+
+                            <group string="Display">
+                                <field name="symbol"/>
+                                <field name="position"/>
+                            </group>
+                        </group> -->
