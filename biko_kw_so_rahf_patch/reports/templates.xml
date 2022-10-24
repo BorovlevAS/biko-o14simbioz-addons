@@ -122,7 +122,7 @@
                     <br/>
                     <td width="100%" align="center">
                         <b>
-                            Рахунок-фактура №
+                            Рахунок на оплату №
                             <span t-field="doc.name"/>
                             <br/>
                             від
@@ -169,13 +169,12 @@
                             <b>Од.вим.</b>
                         </td>
                         <td name="th_priceunit" class="text-center">
-                            <b>Ціна без
-                                ПДВ
+                            <b>Ціна
                             </b>
                         </td>
                         <td name="th_subtotal" class="text-center">
                             <span groups="account.group_show_line_subtotals_tax_excluded">
-                                <b>Сума без ПДВ</b>
+                                <b>Сума</b>
                             </span>
                             <span groups="account.group_show_line_subtotals_tax_included">
                                 <b>Сума</b>
@@ -260,34 +259,34 @@
             </table>
             <table id="o_sub_table" width="100%">
                 <tr>
-                    <td align="right">Разом без ПДВ:</td>
+                    <td align="right">Разом:</td>
                     <td align="right" width="17%">
                         <span t-esc="'{:10.2f}'.format(doc.amount_untaxed).replace('.',',')"/>
                     </td>
                 </tr>
-                <tr>
+                <!-- <tr>
                     <td align="right">ПДВ:</td>
                     <td align="right">
                         <span t-esc="'{:10.2f}'.format(doc.amount_tax).replace('.',',')"/>
                     </td>
-                </tr>
-                <tr>
+                </tr> -->
+                <!-- <tr>
                     <td align="right">Всього з ПДВ:</td>
                     <td align="right">
                         <span t-esc="'{:10.2f}'.format(doc.amount_total).replace('.',',')"/>
                     </td>
-                </tr>
+                </tr> -->
             </table>
             <div>
                 <br/>
                 Всьго на суму:
                 <span t-field="doc.kw_amount_ukr_text"/>
                 <br/>
-                <span style="white-space:nowrap;">ПДВ:
+                <!-- <span style="white-space:nowrap;">ПДВ:
                     <span t-esc="'{:10.2f}'.format(doc.amount_tax).replace('.',',')"/>
                 </span>
                 <span t-esc="doc.kw_currency_name"/>
-                <br/>
+                <br/> -->
                 <br/>
             </div>
 
