@@ -5,7 +5,8 @@
     'author': 'Borovlev A.S.',
     'company': 'Quick Decisions',
     "depends": ['kw_so_rahf'],
-    "data": [
+    "qweb": [
+        'reports/templates.xml'
     ],
     
     'license': 'LGPL-3',
