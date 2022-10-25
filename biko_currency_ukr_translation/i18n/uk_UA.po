@@ -1,0 +1,71 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* biko_currency_ukr_translation
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-25 08:43+0000\n"
+"PO-Revision-Date: 2022-10-25 11:52+0300\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n%10<=4 && (n%100<12 || n%100>14) ? 1 : 2);\n"
+"X-Generator: Poedit 3.2\n"
+
+#. module: biko_currency_ukr_translation
+#: model:ir.model,name:biko_currency_ukr_translation.model_res_currency
+msgid "Currency"
+msgstr "Валюта"
+
+#. module: biko_currency_ukr_translation
+#: model:ir.model.fields,field_description:biko_currency_ukr_translation.field_res_currency__display_name
+msgid "Display Name"
+msgstr "Відображення"
+
+#. module: biko_currency_ukr_translation
+#: model:ir.model.fields,field_description:biko_currency_ukr_translation.field_res_currency__biko_cent_str_five
+#: model:ir.model.fields,field_description:biko_currency_ukr_translation.field_res_currency__biko_str_five
+msgid "Five"
+msgstr "П'ять"
+
+#. module: biko_currency_ukr_translation
+#: model_terms:ir.ui.view,arch_db:biko_currency_ukr_translation.view_currency_form_biko_currency_inherit
+msgid "Float part"
+msgstr "Дрібна частина"
+
+#. module: biko_currency_ukr_translation
+#: model:ir.model.fields,field_description:biko_currency_ukr_translation.field_res_currency__id
+msgid "ID"
+msgstr "ID"
+
+#. module: biko_currency_ukr_translation
+#: model_terms:ir.ui.view,arch_db:biko_currency_ukr_translation.view_currency_form_biko_currency_inherit
+msgid "Integer part"
+msgstr "Ціла частина"
+
+#. module: biko_currency_ukr_translation
+#: model:ir.model.fields,field_description:biko_currency_ukr_translation.field_res_currency____last_update
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: biko_currency_ukr_translation
+#: model_terms:ir.ui.view,arch_db:biko_currency_ukr_translation.view_currency_form_biko_currency_inherit
+msgid "Number spelling"
+msgstr "Параметри пропису"
+
+#. module: biko_currency_ukr_translation
+#: model:ir.model.fields,field_description:biko_currency_ukr_translation.field_res_currency__biko_cent_str_one
+#: model:ir.model.fields,field_description:biko_currency_ukr_translation.field_res_currency__biko_str_one
+msgid "One"
+msgstr "Один"
+
+#. module: biko_currency_ukr_translation
+#: model:ir.model.fields,field_description:biko_currency_ukr_translation.field_res_currency__biko_cent_str_two
+#: model:ir.model.fields,field_description:biko_currency_ukr_translation.field_res_currency__biko_str_two
+msgid "Two"
+msgstr "Два"

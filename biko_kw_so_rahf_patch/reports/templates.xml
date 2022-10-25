@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="kw_so_rahf_template_biko_inherit" inherit_id="kw_so_rahf.kw_so_rahf_template" primary="True">
+        <xpath expr="//*/td[@name='th_priceunit']" position="replace">
+            <td name="th_priceunit" class="text-center">
+                <b>Ціна
+                </b>
+            </td>
+        </xpath>
+        <xpath expr="//*/td[@name='th_subtotal']" position="replace">
+            <td name="th_subtotal" class="text-center">
+                <span groups="account.group_show_line_subtotals_tax_excluded">
+                <b>Сума</b>
+                </span>
+                <span groups="account.group_show_line_subtotals_tax_included">
+                    <b>Сума</b>
+                </span>
+            </td>
+        </xpath>
+        <xpath expr="//*/table[@id='o_sub_table']" position="replace">
+            <table id="o_sub_table" width="100%">
+                <tr>
+                    <td align="right">Разом:</td>
+                    <td align="right" width="17%">
+                        <span t-esc="'{:10.2f}'.format(doc.amount_untaxed).replace('.',',')"/>
+                    </td>
+                </tr>
+            </table>            
+        </xpath>
+        <xpath expr="//*/div" position="replace">
+            <br/>
+            Всьго на суму:
+            <span t-field="doc.kw_amount_ukr_text"/>
+            <br/>
+            <br/>
+        </xpath>
+        <xpath expr="//table[5]/tr/td" position="inside">
+            <t t-if="doc.company_id.stamp_image ">
+                <t t-if="print_with_stamp">
+                    <span>
+                        <img style="max-height:5cm; max-width:5cm; position: relative; left: -150px; top: -120px;"
+                             t-att-src="'data:image/png;base64,%s' % to_text(doc.company_id.stamp_image)"/>
+                    </span>
+                </t>
+            </t>
+        </xpath>
+    </template>
+
+    <template id="biko_kw_so_rahf_container_inherit" inherit_id="kw_so_rahf.kw_so_rahf_container" primary="True">
+        <xpath expr="//t/t/t[@t-call='kw_so_rahf.kw_so_rahf_template']" position="replace">
+            <t t-set="print_with_stamp" t-value="True"/>
+            <t t-call="biko_kw_so_rahf_patch.kw_so_rahf_template_biko_inherit"
+                   t-lang="doc.partner_id.lang"/>
+        </xpath>
+    </template>
+
+</odoo>
