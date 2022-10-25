@@ -1,3 +1,0 @@
-Invoice print document base
-==============================
-
