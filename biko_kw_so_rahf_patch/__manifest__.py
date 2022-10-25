@@ -4,9 +4,9 @@
     'version': '14.0.1.1.1',
     'author': 'Borovlev A.S.',
     'company': 'Quick Decisions',
-    "depends": ['kw_so_rahf', 'biko_stamp_signature'],
+    "depends": ['sale', 'biko_stamp_signature'],
     "data": [
-        'reports/templates.xml',
+        'reports/rahunok_template.xml',
         'views/actions.xml'
     ],
     

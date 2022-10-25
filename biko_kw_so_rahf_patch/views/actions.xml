@@ -17,28 +17,28 @@
         <field name="dpi">90</field>
     </record>
 
-    <record id="biko_rahf_sale_order_report_stamp" model="ir.actions.report">
-        <field name="name">Rakhunok with stamp</field>
+    <record id="biko_rahf_1c_like_report" model="ir.actions.report">
+        <field name="name">Rakhunok w/o stamp</field>
         <field name="model">sale.order</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">biko_kw_so_rahf_patch.biko_kw_so_rahf_container_inherit</field>
-        <field name="report_file">biko_kw_so_rahf_patch.biko_kw_so_rahf_container_inherit</field>
+        <field name="report_name">biko_kw_so_rahf_patch.biko_kw_so_rahf_1c</field>
+        <field name="report_file">biko_kw_so_rahf_patch.biko_kw_so_rahf_1c</field>
         <field name="print_report_name">(object.biko_get_invoice_filename())</field>
         <field name="binding_model_id" ref="sale.model_sale_order"/>
         <field name="binding_type">report</field>
         <field name="paperformat_id" ref="biko_kw_so_rahf_patch.biko_so_rahf_paperformat_a4"/>
     </record>
 
-    <record id="kw_so_rahf_sale_order_report" model="ir.actions.report">
-        <field name="name">Rahunok w/o stamp</field>
+    <record id="biko_rahf_1c_like_report_w_stamp" model="ir.actions.report">
+        <field name="name">Rakhunok with stamp</field>
         <field name="model">sale.order</field>
         <field name="report_type">qweb-pdf</field>
-        <field name="report_name">kw_so_rahf.kw_so_rahf_container</field>
-        <field name="report_file">kw_so_rahf.kw_so_rahf_container</field>
+        <field name="report_name">biko_kw_so_rahf_patch.biko_kw_so_rahf_1c_ws</field>
+        <field name="report_file">biko_kw_so_rahf_patch.biko_kw_so_rahf_1c_ws</field>
         <field name="print_report_name">(object.biko_get_invoice_filename())</field>
         <field name="binding_model_id" ref="sale.model_sale_order"/>
         <field name="binding_type">report</field>
-        <field name="paperformat_id" ref="kw_so_rahf.kw_so_rahf_paperformat_a4"/>
+        <field name="paperformat_id" ref="biko_kw_so_rahf_patch.biko_so_rahf_paperformat_a4"/>
     </record>
 
 </odoo>
