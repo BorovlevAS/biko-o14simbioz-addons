@@ -1,0 +1,245 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-25 20:41+0000\n"
+"PO-Revision-Date: 2022-10-25 20:46+0000\n"
+"Last-Translator: \n"
+"Language-Team: Ukrainian (Ukraine)\n"
+"Language: uk-UA\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"X-Loco-Source-Locale: ru_UA\n"
+"X-Loco-Parser: loco_parse_po\n"
+"X-Generator: Loco https://localise.biz/"
+
+#. module: biko_rahunok_so
+#: model:ir.actions.report,print_report_name:biko_rahunok_so.biko_rahf_1c_like_report
+#:  
+#: model:ir.actions.report,print_report_name:biko_rahunok_so.biko_rahf_1c_like_report_w_stamp
+msgid "(object.biko_get_invoice_filename())"
+msgstr "(object.biko_get_invoice_filename())"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid ", Банк"
+msgstr ", Банк"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid ", МФО"
+msgstr ", МФО"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid ""
+"<b>\n"
+"                                Найменування\n"
+"                            </b>"
+msgstr ""
+"<b>\n"
+"                                Найменування\n"
+"                            </b>"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid ""
+"<b>Кіл-сть\n"
+"                            </b>"
+msgstr ""
+"<b>Кіл-сть\n"
+"                            </b>"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid "<b>Од.</b>"
+msgstr "<b>Од.</b>"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid "<b>Сума</b>"
+msgstr "<b>Сума</b>"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid ""
+"<b>Ціна\n"
+"                            </b>"
+msgstr ""
+"<b>Ціна\n"
+"                            </b>"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid ""
+"<br/>\n"
+"                            РНОКПП"
+msgstr ""
+"<br/>\n"
+"                            РНОКПП"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid ""
+"<br/>\n"
+"                            Юр. адреса:"
+msgstr ""
+"<br/>\n"
+"                            Юр. адреса:"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid ""
+"<br/>\n"
+"                Всьго на суму:"
+msgstr ""
+"<br/>\n"
+"                Всьго на суму:"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid ""
+"<span style=\"white-space:nowrap;\">\n"
+"                                "
+"_______________________________________________\n"
+"                            </span>"
+msgstr ""
+"<span style=\"white-space:nowrap;\">\n"
+"                                "
+"_______________________________________________\n"
+"                            </span>"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid "<strong class=\"mr16\">Subtotal</strong>"
+msgstr "<strong class=\"mr16\">Підсумок</strong>"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid "<strong> Зразок заповнення платіжного доручення </strong>"
+msgstr "<strong> Зразок заповнення платіжного доручення </strong>"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid "<u>Покупець:</u>"
+msgstr "<u>Покупець:</u>"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid "<u>Постачальник:</u>"
+msgstr "<u>Постачальник:</u>"
+
+#. module: biko_rahunok_so
+#: model:ir.model.fields,field_description:biko_rahunok_so.field_sale_order__display_name
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: biko_rahunok_so
+#: model:ir.model.fields,field_description:biko_rahunok_so.field_sale_order__id
+msgid "ID"
+msgstr "ID"
+
+#. module: biko_rahunok_so
+#: model:ir.model.fields,field_description:biko_rahunok_so.field_sale_order____last_update
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: biko_rahunok_so
+#: model:ir.actions.report,name:biko_rahunok_so.biko_rahf_1c_like_report
+msgid "Rakhunok w/o stamp"
+msgstr "Рахунок без печатки"
+
+#. module: biko_rahunok_so
+#: model:ir.actions.report,name:biko_rahunok_so.biko_rahf_1c_like_report_w_stamp
+msgid "Rakhunok with stamp"
+msgstr "Рахунок з печаткою"
+
+#. module: biko_rahunok_so
+#: model:ir.model,name:biko_rahunok_so.model_sale_order
+msgid "Sales Order"
+msgstr "Sales Order"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid "Банк одержувача"
+msgstr "Банк одержувача"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid ""
+"Виписав:\n"
+"                        <span style=\"white-space:nowrap;\">\n"
+"                            ________________________\n"
+"                        </span>"
+msgstr ""
+"Виписав:\n"
+"                        <span style=\"white-space:nowrap;\">\n"
+"                            ________________________\n"
+"                        </span>"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid "КРЕДИТ рах. N"
+msgstr "КРЕДИТ рах. N"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid "Код"
+msgstr "Код"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid "Код банку"
+msgstr "Код банку"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid "Одержувач"
+msgstr "Одержувач"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid "Разом:"
+msgstr "Разом:"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid ""
+"Рахунок дійсний\n"
+"                                протягом"
+msgstr ""
+"Рахунок дійсний\n"
+"                                протягом"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid "Рахунок на оплату №"
+msgstr "Рахунок на оплату №"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid ""
+"Увага! Оплата цього рахунку означає погодження з умовами поставки товарів. "
+"Повідомлення про оплату є обов'язковим, в іншому випадку не гарантується "
+"наявність товарів на складі. Товар відпускається за фактом надходження "
+"коштів на р/р Постачальника, самовивозом, за наявності довіреності та "
+"паспорта."
+msgstr ""
+"Увага! Оплата цього рахунку означає погодження з умовами поставки товарів. "
+"Повідомлення про оплату є обов'язковим, в іншому випадку не гарантується "
+"наявність товарів на складі. Товар відпускається за фактом надходження "
+"коштів на р/р Постачальника, самовивозом, за наявності довіреності та "
+"паспорта."
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid "від"
+msgstr "від"
+
+#. module: biko_rahunok_so
+#: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
+msgid "р/р"
+msgstr "р/р"
