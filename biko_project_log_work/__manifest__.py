@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 {
     'name': "BIKO: Протоколирование работы в проекте",
-    'version': '15.0.1.1.0',
+    'version': '14.0.1.1.0',
     'author': 'Borovlev A.S.',
     'company': 'Quick Decisions',
     "depends": ['project', 'hr_timesheet'],

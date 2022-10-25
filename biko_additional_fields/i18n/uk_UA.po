@@ -1,0 +1,267 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-25 22:30+0000\n"
+"PO-Revision-Date: 2022-10-25 22:37+0000\n"
+"Last-Translator: \n"
+"Language-Team: Ukrainian (Ukraine)\n"
+"Language: uk-UA\n"
+"Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
+"n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"X-Loco-Source-Locale: ru_UA\n"
+"X-Loco-Parser: loco_parse_po\n"
+"X-Generator: Loco https://localise.biz/"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_partner__email2_formatted
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_users__email2_formatted
+msgid "Additional Email"
+msgstr "Додатковий e-mail"
+
+#. module: biko_additional_fields
+#: model:ir.ui.menu,name:biko_additional_fields.menu_biko_additional_info
+msgid "Additional Information"
+msgstr "Додаткова інформація"
+
+#. module: biko_additional_fields
+#: model:ir.model,name:biko_additional_fields.model_biko_software
+msgid "BIKO: software"
+msgstr "BIKO: програмне забезпечення"
+
+#. module: biko_additional_fields
+#: model:ir.model,name:biko_additional_fields.model_biko_source
+msgid "BIKO: sources"
+msgstr "BIKO: джерела лідів"
+
+#. module: biko_additional_fields
+#: model_terms:ir.ui.view,arch_db:biko_additional_fields.crm_lead_view_form_biko_inherited1
+msgid "Campaign (UTM)"
+msgstr "Campaign (UTM)"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_software__color
+msgid "Color Index"
+msgstr "Колір"
+
+#. module: biko_additional_fields
+#: model:ir.actions.act_window,name:biko_additional_fields.biko_action_companies_list
+#:  
+#: model:ir.ui.menu,name:biko_additional_fields.biko_res_partner_menu_companies
+msgid "Companies"
+msgstr "Компанії"
+
+#. module: biko_additional_fields
+#: model_terms:ir.actions.act_window,help:biko_additional_fields.biko_software_action_tree
+msgid "Create a Software"
+msgstr "Створити"
+
+#. module: biko_additional_fields
+#: model_terms:ir.actions.act_window,help:biko_additional_fields.biko_action_companies_list
+msgid "Create a contact in your address book"
+msgstr "Створити контакт в адресній книзі"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_software__create_uid
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_source__create_uid
+msgid "Created by"
+msgstr "Створив"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_software__create_date
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_source__create_date
+msgid "Created on"
+msgstr "Створено"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_software__display_name
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_source__display_name
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_crm_lead__display_name
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Назва"
+
+#. module: biko_additional_fields
+#: model_terms:ir.ui.view,arch_db:biko_additional_fields.qdes_res_partner_view_form1
+msgid "Email (add.)"
+msgstr "Email (add.)"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_partner__email2
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_users__email2
+msgid "Email2"
+msgstr "Email2"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,help:biko_additional_fields.field_res_partner__email2_formatted
+#:  
+#: model:ir.model.fields,help:biko_additional_fields.field_res_users__email2_formatted
+msgid "Format email address \"Name <email@domain>\""
+msgstr "Форматована e-mail адреса \"Name <email@domain>\""
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_software__id
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_source__id
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_crm_lead__id
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: biko_additional_fields
+#: model_terms:ir.ui.view,arch_db:biko_additional_fields.biko_res_partner_view_search
+msgid "Industry"
+msgstr "Індустрія"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_partner__inner_name
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_users__inner_name
+#:  
+#: model_terms:ir.ui.view,arch_db:biko_additional_fields.qdes_res_partner_view_form1
+msgid "Inner name"
+msgstr "Внутрішня назва"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_software____last_update
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_source____last_update
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_crm_lead____last_update
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Остання зміна"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_software__write_uid
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_source__write_uid
+msgid "Last Updated by"
+msgstr "Змінив"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_software__write_date
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_source__write_date
+msgid "Last Updated on"
+msgstr "Останнє оновлення"
+
+#. module: biko_additional_fields
+#: model:ir.model,name:biko_additional_fields.model_crm_lead
+msgid "Lead/Opportunity"
+msgstr "Лід/Угода"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_crm_lead__lost_reason_comment
+msgid "Lost reason (comment)"
+msgstr "Причина програшу (коментар)"
+
+#. module: biko_additional_fields
+#: model_terms:ir.ui.view,arch_db:biko_additional_fields.crm_lead_view_form_biko_inherited1
+msgid "Medium (UTM)"
+msgstr "Medium (UTM)"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_software__name
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_biko_source__name
+msgid "Name"
+msgstr "Назва"
+
+#. module: biko_additional_fields
+#: model_terms:ir.actions.act_window,help:biko_additional_fields.biko_action_companies_list
+msgid "Odoo helps you to easily track all activities related to a customer."
+msgstr "Odoo допомагає вам легко відстежувати всі дії, пов’язані з клієнтом."
+
+#. module: biko_additional_fields
+#: model_terms:ir.actions.act_window,help:biko_additional_fields.biko_software_action_tree
+msgid "Odoo helps you track all activities related to your Software."
+msgstr "Odoo допомагає вам вести перелік програмного забезпечення у клієнта"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_partner__recomendator_id
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_users__recomendator_id
+msgid "Recommendator"
+msgstr "Хто порекомендував"
+
+#. module: biko_additional_fields
+#: model:ir.model,name:biko_additional_fields.model_res_partner
+msgid "Res partner Sequences"
+msgstr "Перелік партнерів"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_partner__skype
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_users__skype
+msgid "Skype"
+msgstr "Skype"
+
+#. module: biko_additional_fields
+#: model:ir.actions.act_window,name:biko_additional_fields.biko_software_action_tree
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_partner__software_ids
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_users__software_ids
+#:  model:ir.ui.menu,name:biko_additional_fields.menu_biko_software 
+#: model_terms:ir.ui.view,arch_db:biko_additional_fields.biko_res_partner_tree 
+#: model_terms:ir.ui.view,arch_db:biko_additional_fields.biko_software_view_tree
+#:  
+#: model_terms:ir.ui.view,arch_db:biko_additional_fields.qdes_res_partner_view_form1
+msgid "Software"
+msgstr "Програмне забезпечення"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_partner__source_id
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_users__source_id
+msgid "Source"
+msgstr "Джерело"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_crm_lead__inner_source_id
+msgid "Source (QDES)"
+msgstr "Source (QDES)"
+
+#. module: biko_additional_fields
+#: model_terms:ir.ui.view,arch_db:biko_additional_fields.crm_lead_view_form_biko_inherited1
+msgid "Source (UTM)"
+msgstr "Source (UTM)"
+
+#. module: biko_additional_fields
+#: model:ir.actions.act_window,name:biko_additional_fields.biko_source_action_tree
+#: model:ir.ui.menu,name:biko_additional_fields.menu_biko_source 
+#: model_terms:ir.ui.view,arch_db:biko_additional_fields.biko_source_view_tree
+msgid "Sources"
+msgstr "Джерела"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_partner__telegram
+#:  
+#: model:ir.model.fields,field_description:biko_additional_fields.field_res_users__telegram
+msgid "Telegram"
+msgstr "Telegram"
+
+#. module: biko_additional_fields
+#: model:ir.model.fields,help:biko_additional_fields.field_res_partner__source_id
+#:  
+#: model:ir.model.fields,help:biko_additional_fields.field_res_users__source_id
+msgid ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"
+msgstr ""
+"This is the source of the link, e.g. Search Engine, another domain, or name "
+"of email list"

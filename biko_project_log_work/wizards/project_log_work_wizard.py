@@ -33,7 +33,8 @@ class ProjectTaskLogWork(models.TransientModel):
     def action_log_work_apply(self):
         tasks = self.env['project.task'].browse(self.env.context.get('active_ids'))
         for task in tasks:
-            task.message_post(body=self.description)
+            if self.description:
+                task.message_post(body=self.description)
             vals_list = {
                     'name': self.comment if self.comment else ' / ',
                     'date': self.date,
