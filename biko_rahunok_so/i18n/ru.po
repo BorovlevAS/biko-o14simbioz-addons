@@ -3,10 +3,10 @@ msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2022-10-25 20:41+0000\n"
-"PO-Revision-Date: 2022-10-25 20:46+0000\n"
+"PO-Revision-Date: 2022-10-25 20:47+0000\n"
 "Last-Translator: \n"
-"Language-Team: Ukrainian (Ukraine)\n"
-"Language: uk-UA\n"
+"Language-Team: Russian (Russia)\n"
+"Language: ru-RU\n"
 "Plural-Forms: nplurals=3; plural=(n%10==1 && n%100!=11 ? 0 : n%10 >= 2 && "
 "n%10<=4 &&(n%100<10||n%100 >= 20)? 1 : 2);\n"
 "MIME-Version: 1.0\n"
@@ -115,7 +115,7 @@ msgstr ""
 #. module: biko_rahunok_so
 #: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
 msgid "<strong class=\"mr16\">Subtotal</strong>"
-msgstr "<strong class=\"mr16\">Підсумок</strong>"
+msgstr "<strong class=\"mr16\">Подитог</strong>"
 
 #. module: biko_rahunok_so
 #: model_terms:ir.ui.view,arch_db:biko_rahunok_so.biko_rahunok_sale_order
@@ -150,12 +150,12 @@ msgstr "Last Modified on"
 #. module: biko_rahunok_so
 #: model:ir.actions.report,name:biko_rahunok_so.biko_rahf_1c_like_report
 msgid "Rakhunok w/o stamp"
-msgstr "Рахунок без печатки"
+msgstr "Счет без печати"
 
 #. module: biko_rahunok_so
 #: model:ir.actions.report,name:biko_rahunok_so.biko_rahf_1c_like_report_w_stamp
 msgid "Rakhunok with stamp"
-msgstr "Рахунок з печаткою"
+msgstr "Счет с печатью"
 
 #. module: biko_rahunok_so
 #: model:ir.model,name:biko_rahunok_so.model_sale_order
