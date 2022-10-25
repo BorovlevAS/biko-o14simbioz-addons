@@ -1,0 +1,117 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-25 23:14+0000\n"
+"PO-Revision-Date: 2022-10-25 23:19+0000\n"
+"Last-Translator: \n"
+"Language-Team: Unknown\n"
+"Language: zxx\n"
+"Plural-Forms: nplurals=2; plural=n!=1;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"X-Loco-Source-Locale: ru_UA\n"
+"X-Loco-Parser: loco_parse_po\n"
+"X-Generator: Loco https://localise.biz/"
+
+#. module: biko_project_log_work
+#: model_terms:ir.ui.view,arch_db:biko_project_log_work.biko_log_work_view_form
+msgid "Cancel"
+msgstr "Отмена"
+
+#. module: biko_project_log_work
+#: model:ir.model.fields,field_description:biko_project_log_work.field_project_task_log_work__comment
+msgid "Comment"
+msgstr "Комментарий"
+
+#. module: biko_project_log_work
+#: model:ir.model.fields,field_description:biko_project_log_work.field_project_task_log_work__create_uid
+msgid "Created by"
+msgstr "Created by"
+
+#. module: biko_project_log_work
+#: model:ir.model.fields,field_description:biko_project_log_work.field_project_task_log_work__create_date
+msgid "Created on"
+msgstr "Created on"
+
+#. module: biko_project_log_work
+#: model:ir.model.fields,field_description:biko_project_log_work.field_project_task_log_work__date
+#:  
+#: model_terms:ir.ui.view,arch_db:biko_project_log_work.biko_log_work_view_form
+msgid "Date"
+msgstr "Дата"
+
+#. module: biko_project_log_work
+#: model:ir.model.fields,field_description:biko_project_log_work.field_project_task_log_work__description
+#:  
+#: model_terms:ir.ui.view,arch_db:biko_project_log_work.biko_log_work_view_form
+msgid "Description"
+msgstr "Детальное описание работы"
+
+#. module: biko_project_log_work
+#: model:ir.model.fields,field_description:biko_project_log_work.field_project_task_log_work__display_name
+msgid "Display Name"
+msgstr "Display Name"
+
+#. module: biko_project_log_work
+#: model:ir.model.fields,field_description:biko_project_log_work.field_project_task_log_work__employee_id
+#:  
+#: model_terms:ir.ui.view,arch_db:biko_project_log_work.biko_log_work_view_form
+msgid "Employee"
+msgstr "Сотрудник"
+
+#. module: biko_project_log_work
+#: model:ir.model.fields,field_description:biko_project_log_work.field_project_task_log_work__id
+msgid "ID"
+msgstr "ID"
+
+#. module: biko_project_log_work
+#: model:ir.model.fields,field_description:biko_project_log_work.field_project_task_log_work____last_update
+msgid "Last Modified on"
+msgstr "Last Modified on"
+
+#. module: biko_project_log_work
+#: model:ir.model.fields,field_description:biko_project_log_work.field_project_task_log_work__write_uid
+msgid "Last Updated by"
+msgstr "Last Updated by"
+
+#. module: biko_project_log_work
+#: model:ir.model.fields,field_description:biko_project_log_work.field_project_task_log_work__write_date
+msgid "Last Updated on"
+msgstr "Last Updated on"
+
+#. module: biko_project_log_work
+#: model:ir.actions.act_window,name:biko_project_log_work.action_biko_log_work 
+#: model_terms:ir.ui.view,arch_db:biko_project_log_work.biko_log_work_view_form
+#:  
+#: model_terms:ir.ui.view,arch_db:biko_project_log_work.view_task_form_biko_log_work_inherit
+msgid "Log work"
+msgstr "Занести время"
+
+#. module: biko_project_log_work
+#: model_terms:ir.ui.view,arch_db:biko_project_log_work.biko_log_work_view_form
+msgid "Short comment"
+msgstr "Короткий комментарий"
+
+#. module: biko_project_log_work
+#: model_terms:ir.ui.view,arch_db:biko_project_log_work.biko_log_work_view_form
+msgid "Submit"
+msgstr "Записать"
+
+#. module: biko_project_log_work
+#: model:ir.model.fields,field_description:biko_project_log_work.field_project_task_log_work__log_time
+#:  
+#: model_terms:ir.ui.view,arch_db:biko_project_log_work.biko_log_work_view_form
+msgid "Time"
+msgstr "Время"
+
+#. module: biko_project_log_work
+#: model:ir.model.fields,field_description:biko_project_log_work.field_project_task_log_work__user_id
+msgid "User"
+msgstr "Пользователь"
+
+#. module: biko_project_log_work
+#: model:ir.model,name:biko_project_log_work.model_project_task_log_work
+msgid "project.task.log.work"
+msgstr "project.task.log.work"
