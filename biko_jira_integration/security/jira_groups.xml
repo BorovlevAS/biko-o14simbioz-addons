@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="category_biko_jira_integration" model="ir.module.category">
+        <field name="name">JIRA Integration</field>
+        <field name="sequence">100</field>
+    </record>
+
+    <record id="jira_integration_admin" model="res.groups">
+        <field name="name">JIRA Integration Administrator</field>
+        <field name="category_id" ref="category_biko_jira_integration"/>
+    </record>
+
+</odoo>

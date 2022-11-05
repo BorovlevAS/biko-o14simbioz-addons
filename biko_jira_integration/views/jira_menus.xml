@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <!--1. Top menu-->
+    <menuitem id="jira_integration_menu"
+              name="JIRA integration"
+              web_icon="biko_jira_integration,static/description/icon.png"
+              sequence="50"/>
+
+    <!--1.1 Sub menu-->
+    <!-- <menuitem id="jira_project_menu"
+              name="Projects"
+              parent="jira_integration_menu"
+              sequence="40"
+              action="action_jira_project"/> -->
+
+    <!--1.2 Sub menu-->
+    <menuitem id="jira_project_catalogs"
+              name="Catalogs"
+              parent="jira_integration_menu"
+              sequence="50"/>
+              
+    <!--1.2.1 Sub menu-->
+    <menuitem id="jira_project_categories"
+              name="Categories"
+              parent="jira_project_catalogs"
+              sequence="10"
+              action="action_jira_project_categories"/>
+    
+    <!--1.2.2 Sub menu-->
+    <!-- <menuitem id="jira_project_categories"
+              name="Projects"
+              parent="jira_project_catalogs"
+              sequence="20"
+              action="action_jira_project"/> -->
+
+</odoo>

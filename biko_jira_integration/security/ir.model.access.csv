@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_jira_integration_admin,access.jira.integration.admin,model_jira_project_categories,biko_jira_integration.jira_integration_admin,1,1,1,1

@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="jira_project_categories_view_form" model="ir.ui.view">
+        <field name="name">jira.project.categories.view.form</field>
+        <field name="model">jira.project.categories</field>
+        <field name="arch" type="xml">
+            <form string="Project categories">
+                <field name="jira_id"/>
+                <field name="name"/>
+                <field name="jira_description"/>
+                <field name="url"/>
+                <field name="load_projects"/>
+            </form>
+        </field>
+    </record>
+
+    <record id="jira_project_categories_view_tree" model="ir.ui.view">
+        <field name="name">jira.project.categories.view.tree</field>
+        <field name="model">jira.project.categories</field>
+        <field name="arch" type="xml">
+            <tree string="Project categories">
+                <field name="jira_id"/>
+                <field name="name"/>
+                <field name="jira_description"/>
+                <field name="url"/>
+                <field name="load_projects"/>
+            </tree>
+        </field>
+    </record>
+
+    <record id="jira_project_categories_search_view" model="ir.ui.view">
+        <field name="name">jira.project.categories.search.view</field>
+        <field name="model">jira.project.categories</field>
+        <field name="arch" type="xml">
+            <search string="Project categories">
+                <field name="name"/>
+            </search>
+        </field>
+    </record>
+
+    <record id="action_jira_project_categories" model="ir.actions.act_window">
+        <field name="name">Categories</field>
+        <field name="res_model">jira.project.categories</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+</odoo>
