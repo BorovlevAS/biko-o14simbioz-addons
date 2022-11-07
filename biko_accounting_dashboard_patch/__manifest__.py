@@ -1,12 +1,13 @@
 # -*- coding: utf-8 -*-
 {
     'name': "BIKO: Патч модуля base accounting kit",
-    'version': '15.0.1.1.0',
+    'version': '14.0.1.1.0',
     'author': 'Borovlev A.S.',
     'company': 'BIKO Solutions',
     "depends": ['base_accounting_kit'],
     "data": [
         'views/assets.xml',
+        'views/actions.xml',
     ],
     
     'license': 'LGPL-3',
