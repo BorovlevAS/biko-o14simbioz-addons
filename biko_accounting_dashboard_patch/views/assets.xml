@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="biko_db_patch_assets_backend" inherit_id="web.assets_backend" name="BIKO Dashboard Patch Assets">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/biko_accounting_dashboard_patch/static/src/js/account_dashboard_patch.js"/>
+        </xpath>
+    </template>
+</odoo>
