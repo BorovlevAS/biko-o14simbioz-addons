@@ -75,6 +75,7 @@ odoo.define('BikoDashboardPatch.AccountingDashboard', function(require) {
             'click #total_expense_this_year': 'expense_year',
             'click #total_expenses_': 'expense_month',
             'change #income_expense_values': 'onchange_income_expense',
+            'change #invoice_values': 'onchange_invoice_values',
         },
         onchange_income_expense: function (ev) {
 
@@ -90,6 +91,18 @@ odoo.define('BikoDashboardPatch.AccountingDashboard', function(require) {
                     break;
                 case 'income_last_year':
                     this.onclick_income_last_year(ev);
+                    break;
+            }
+        },
+
+        onchange_invoice_values: function (ev) {
+
+            switch(ev.target.value) {
+                case 'this_month':
+                    this.onclick_invoice_this_month(ev);
+                    break;
+                case 'this_year':
+                    this.onclick_invoice_this_year(ev);
                     break;
             }
         },
