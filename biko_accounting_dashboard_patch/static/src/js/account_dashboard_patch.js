@@ -1182,8 +1182,8 @@ odoo.define('BikoDashboardPatch.AccountingDashboard', function(require) {
 
 
                     $('#toggle-two').bootstrapToggle({
-                        on: 'View All Entries',
-                        off: 'View Posted Entries'
+                        on: 'Posted Entries',
+                        off: 'All Entries'
                     });
 
 
