@@ -10,16 +10,12 @@
                 <field name="kw_bank_import_partner_auto_create"/>
                 <field name="kw_bank_import_initial_date"/>
             </field>
-            <page id="inbound_payment_settings" position="inside">
-                <group>
-                    <field name="default_debit_account_id" options="{'no_create': True}" domain="[('deprecated', '=', False)]" groups="account.group_account_user"/>
-                </group>
-            </page>
-            <page id="outbound_payment_settings" position="inside">
-                <group>
-                    <field name="default_credit_account_id" options="{'no_create': True}" domain="[('deprecated', '=', False)]" groups="account.group_account_user"/>
-                </group>
-            </page>
+            <field name="inbound_payment_method_ids" position="after">
+                <field name="default_debit_account_id" options="{'no_create': True}" domain="[('deprecated', '=', False)]" groups="account.group_account_user"/>
+            </field>
+            <field name="outbound_payment_method_ids" position="after">
+                <field name="default_credit_account_id" options="{'no_create': True}" domain="[('deprecated', '=', False)]" groups="account.group_account_user"/>
+            </field>
         </field>
     </record>
 
