@@ -1,0 +1,7 @@
+<templates id="template" xml:space="preserve">
+    <t t-inherit="base_accounting_kit.Invoicedashboard" t-name = "Invoicedashboard" t-inherit-mode="extension">
+        <xpath expr="//option[@id='income_last_year']" position="replace">
+            <option id="income_last_year" value="income_last_year">Last Year</option>
+        </xpath>
+    </t>
+</templates>

@@ -8,7 +8,10 @@
     "data": [
         'views/assets.xml',
         'views/actions.xml',
+        # 'views/template_patch.xml'
     ],
+
+    "qweb": ["static/src/xml/template_patch.xml"],
     
     'license': 'LGPL-3',
     'installable': True,
