@@ -55,8 +55,8 @@
                                             <tr>
                                                 <td align="center">
                                                     <strong>
-                                                        <t t-if="doc.company_id and doc.company_id.partner_id and doc.company_id.partner_id.bank_ids">
-                                                            <span t-field="doc.company_id.partner_id.bank_ids[0].acc_number"/>
+                                                        <t t-if="doc.bank_id">
+                                                            <span t-field="doc.bank_id.acc_number"/>
                                                         </t>
                                                     </strong>
                                                 </td>
@@ -69,12 +69,12 @@
                                     <td colspan="4" align="center">Код банку</td>
                                 </tr>
                                 <tr>
-                                    <td colspan="18"><strong><span t-field="doc.company_id.partner_id.bank_ids[0].bank_id.name"/></strong></td>
+                                    <td colspan="18"><strong><span t-field="doc.bank_id.bank_id.name"/></strong></td>
                                     <td colspan="4">
                                         <table border="2" style="border-collapse: collapse; width: 100%;">
                                             <tr>
                                                 <td align="center">
-                                                    <strong><span t-field="doc.company_id.partner_id.bank_ids[0].bank_id.bic"/></strong>
+                                                    <strong><span t-field="doc.bank_id.bank_id.bic"/></strong>
                                                 </td>
                                             </tr>
                                         </table>
@@ -106,16 +106,12 @@
                             <span style="white-space:nowrap;">р/р
                                 <span t-field="doc.bank_id.acc_number"/>
                             </span>
-                            <t t-if="doc.bank_id.name">
-                                <span style="white-space:nowrap;">, Банк 
-                                    <span t-field="doc.bank_id.name"/>
-                                </span>
-                            </t>
-                            <t t-if="doc.bank_id.bic">
-                                <span style="white-space:nowrap;">, МФО 
-                                    <span t-field="doc.bank_id.bic"/>
-                                </span>
-                            </t>
+                            <span style="white-space:nowrap;">, Банк 
+                                <span t-field="doc.bank_id.bank_id.name"/>
+                            </span>
+                            <span style="white-space:nowrap;">, МФО 
+                                <span t-field="doc.bank_id.bank_id.bic"/>
+                            </span>
                         </t>
                         <t t-if="doc.company_id and doc.company_id.partner_id">
                             <br/>
