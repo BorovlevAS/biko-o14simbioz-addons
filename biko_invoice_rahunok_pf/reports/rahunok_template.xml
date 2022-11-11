@@ -290,7 +290,7 @@
                         <tr>
                             <td align="right">Сплачено: <t t-esc="payment_vals['date']" t-options='{"widget": "date"}'/></td>
                             <td class="text-right">
-                                <span t-esc="payment_vals['amount']" t-options='{"widget": "monetary", "display_currency": doc.currency_id}'/>
+                                <span t-esc="payment_vals['amount']"/>
                             </td>
                         </tr>
                     </t>
@@ -305,9 +305,14 @@
                 </t>
             </table>
             <div>
-                <br/>
                 Всьго на суму:
-                <span t-field="doc.kw_amount_ukr_text"/>
+                <t t-if="doc.payment_state != 'invoicing_legacy'">
+                    <span t-field="doc.amount_residual_ukr_text"/>
+                </t>
+                <t t-else="">
+                    <span t-field="doc.kw_amount_ukr_text"/>
+                </t>
+                <br/>
                 <br/>
                 <br/>
             </div>

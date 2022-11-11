@@ -15,6 +15,7 @@ class AccountMove(models.Model):
     kw_taxed_ukr_text = fields.Char(compute = '_compute_kw_taxed_ukr_text')
     company_partner_id = fields.Many2one(related='company_id.partner_id', string = 'Our Partner')
     kw_amount_untaxed_ukr_text = fields.Char(compute = '_compute_kw_amount_untaxed_ukr_text')
+    amount_residual_ukr_text = fields.Char(compute = '_compute_amount_residual_ukr_text')
 
     @api.onchange('company_id')
     def _biko_onchange_company_id(self):
@@ -29,6 +30,15 @@ class AccountMove(models.Model):
             domain = "[('partner_id', '=', company_partner_id)]",
             default = _biko_onchange_company_id,
             tracking = True)
+
+    def _compute_amount_residual_ukr_text(self):
+        for obj in self:
+            obj.amount_residual_ukr_text = '{} {} {:0>2} {}'.format(
+                num2words(int(obj.amount_residual), lang='uk'),
+                obj.currency_id.biko_get_currency_name(obj.amount_residual, False),
+                round(100 * (obj.amount_residual - int(obj.amount_residual))),
+                obj.currency_id.biko_get_currency_name(round(100 * (obj.amount_residual - int(obj.amount_residual))), True),
+            ).capitalize()
 
     def _compute_kw_amount_ukr_text(self):
         for obj in self:
