@@ -68,6 +68,6 @@ class AccountMove(models.Model):
             ).capitalize()
 
     def biko_get_invoice_filename(self):
-        doc_num = self.name.split('/')[-1]
+        doc_num = self.name
         doc_date = self.invoice_date.strftime("%d.%m.%Y")
         return f'Рахунок № {doc_num} від {doc_date}'
