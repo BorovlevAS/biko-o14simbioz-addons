@@ -2,8 +2,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 14.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2022-11-11 21:51+0000\n"
-"PO-Revision-Date: 2022-11-11 21:58+0000\n"
+"POT-Creation-Date: 2022-11-13 19:05+0000\n"
+"PO-Revision-Date: 2022-11-13 19:09+0000\n"
 "Last-Translator: \n"
 "Language-Team: Ukrainian (Ukraine)\n"
 "Language: uk-UA\n"
@@ -17,11 +17,11 @@ msgstr ""
 "X-Generator: Loco https://localise.biz/"
 
 #. module: biko_invoice_rahunok_pf
-#: model:ir.actions.report,print_report_name:biko_invoice_rahunok_pf.biko_invoice_rahunok
+#: model:ir.actions.report,print_report_name:biko_invoice_rahunok_pf.biko_invoice_akt
 #:  
-#: model:ir.actions.report,print_report_name:biko_invoice_rahunok_pf.biko_invoice_rahunok_w_stamp
-msgid "(object.biko_get_invoice_filename())"
-msgstr "(object.biko_get_invoice_filename())"
+#: model:ir.actions.report,print_report_name:biko_invoice_rahunok_pf.biko_invoice_akt_w_stamp
+msgid "(object.biko_get_akt_filename())"
+msgstr "(object.biko_get_akt_filename())"
 
 #. module: biko_invoice_rahunok_pf
 #: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
@@ -32,6 +32,19 @@ msgstr ", Банк"
 #: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
 msgid ", МФО"
 msgstr ", МФО"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid ""
+", з одного боку, і представник\n"
+"                Виконавця ФОП Боровльов А. С., з іншого боку, склали цей акт "
+"про те, що Виконавцем \n"
+"                були виконані наступні роботи (надані такі послуги):"
+msgstr ""
+", з одного боку, і представник\n"
+"                Виконавця ФОП Боровльов А. С., з іншого боку, склали цей акт "
+"про те, що Виконавцем \n"
+"                були виконані наступні роботи (надані такі послуги):"
 
 #. module: biko_invoice_rahunok_pf
 #: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
@@ -91,6 +104,68 @@ msgstr ""
 "                            Юр. адреса:"
 
 #. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid ""
+"<br/>\n"
+"                        <br/>\n"
+"                        _____________________________<br/>\n"
+"                        <br/>"
+msgstr ""
+"<br/>\n"
+"                        <br/>\n"
+"                        _____________________________<br/>\n"
+"                        <br/>"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid ""
+"<br/>\n"
+"                        <span style=\"font-size: 8px; vertical-align: top;\">"
+"* Відповідальний за здійснення господарської операції і правильність її "
+"оформлення<br/></span>"
+msgstr ""
+"<br/>\n"
+"                        <span style=\"font-size: 8px; vertical-align: top;\">"
+"* Відповідальний за здійснення господарської операції і правильність її "
+"оформлення<br/></span>"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid ""
+"<br/>\n"
+"                        Банк"
+msgstr ""
+"<br/>\n"
+"                        Банк"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid ""
+"<br/>\n"
+"                        МФО"
+msgstr ""
+"<br/>\n"
+"                        МФО"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid ""
+"<br/>\n"
+"                        р/р"
+msgstr ""
+"<br/>\n"
+"                        р/р"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid ""
+"<br/>\n"
+"                        юр. адреса"
+msgstr ""
+"<br/>\n"
+"                        юр. адреса"
+
+#. module: biko_invoice_rahunok_pf
 #: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
 msgid ""
 "<span style=\"white-space:nowrap;\">\n"
@@ -104,6 +179,65 @@ msgstr ""
 "                            </span>"
 
 #. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid ""
+"<span><b>Від Виконавця*</b></span>\n"
+"                            <br/><br/>\n"
+"                            _______________________<br/>"
+msgstr ""
+"<span><b>Від Виконавця*</b></span>\n"
+"                            <br/><br/>\n"
+"                            _______________________<br/>"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid ""
+"<span><b>Від Замовника</b></span>\n"
+"                        <br/><br/>\n"
+"                        _______________________<br/>\n"
+"                        <br/>\n"
+"                        <br/>"
+msgstr ""
+"<span><b>Від Замовника</b></span>\n"
+"                        <br/><br/>\n"
+"                        _______________________<br/>\n"
+"                        <br/>\n"
+"                        <br/>"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid "<span><strong>Знижка.%</strong></span>"
+msgstr "<span><strong>Знижка.%</strong></span>"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid "<span><strong>ПДВ</strong></span>"
+msgstr "<span><strong>ПДВ</strong></span>"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid "<span><strong>Сума</strong></span>"
+msgstr "<span><strong>Сума</strong></span>"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid "<span>Загальна вартість робіт (послуг) склала:</span>"
+msgstr "<span>Загальна вартість робіт (послуг) склала:</span>"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid ""
+"<span>Замовник претензій по об'єму, якості та строкам виконання робіт "
+"(надання послуг) не має.<br/></span>\n"
+"                <br/>\n"
+"                <span>Місце складання:   м. Львів<br/></span>"
+msgstr ""
+"<span>Замовник претензій по об'єму, якості та строкам виконання робіт "
+"(надання послуг) не має.<br/></span>\n"
+"                <br/>\n"
+"                <span>Місце складання:   м. Львів<br/></span>"
+
+#. module: biko_invoice_rahunok_pf
 #: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
 msgid "<span>Знижка.%</span>"
 msgstr "<span>Знижка.%</span>"
@@ -114,7 +248,8 @@ msgid "<span>ПДВ</span>"
 msgstr "<span>ПДВ</span>"
 
 #. module: biko_invoice_rahunok_pf
-#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+#:  model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
 msgid "<strong class=\"mr16\">Підсумок</strong>"
 msgstr "<strong class=\"mr16\">Підсумок</strong>"
 
@@ -122,6 +257,26 @@ msgstr "<strong class=\"mr16\">Підсумок</strong>"
 #: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
 msgid "<strong> Зразок заповнення платіжного доручення </strong>"
 msgstr "<strong> Зразок заповнення платіжного доручення </strong>"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid "<strong>Кількість</strong>"
+msgstr "<strong>Кількість</strong>"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid "<strong>Найменування робіт, послуг</strong>"
+msgstr "<strong>Найменування робіт, послуг</strong>"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid "<strong>Од.</strong>"
+msgstr "<strong>Од.</strong>"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid "<strong>Ціна</strong>"
+msgstr "<strong>Ціна</strong>"
 
 #. module: biko_invoice_rahunok_pf
 #: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
@@ -132,6 +287,16 @@ msgstr "<u>Покупець:</u>"
 #: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
 msgid "<u>Постачальник:</u>"
 msgstr "<u>Постачальник:</u>"
+
+#. module: biko_invoice_rahunok_pf
+#: model:ir.actions.report,name:biko_invoice_rahunok_pf.biko_invoice_akt
+msgid "Akt w/o stamp"
+msgstr "Акт виконаних робіт (без печатки)"
+
+#. module: biko_invoice_rahunok_pf
+#: model:ir.actions.report,name:biko_invoice_rahunok_pf.biko_invoice_akt_w_stamp
+msgid "Akt with stamp"
+msgstr "Акт виконаних робіт (з печаткою)"
 
 #. module: biko_invoice_rahunok_pf
 #: model:ir.model.fields,field_description:biko_invoice_rahunok_pf.field_account_bank_statement_line__amount_residual_ukr_text
@@ -154,7 +319,7 @@ msgstr "Банківський рахунок"
 #. module: biko_invoice_rahunok_pf
 #: model:ir.model,name:biko_invoice_rahunok_pf.model_res_partner_bank
 msgid "Bank Accounts"
-msgstr "Банківські рахунки"
+msgstr "Bank Accounts"
 
 #. module: biko_invoice_rahunok_pf
 #: model:ir.model.fields,field_description:biko_invoice_rahunok_pf.field_account_move__display_name
@@ -221,12 +386,26 @@ msgstr "Our Partner"
 #. module: biko_invoice_rahunok_pf
 #: model:ir.actions.report,name:biko_invoice_rahunok_pf.biko_invoice_rahunok
 msgid "Rakhunok w/o stamp"
-msgstr "Рахунок без печатки"
+msgstr "Рахунок (без печатки)"
 
 #. module: biko_invoice_rahunok_pf
 #: model:ir.actions.report,name:biko_invoice_rahunok_pf.biko_invoice_rahunok_w_stamp
 msgid "Rakhunok with stamp"
-msgstr "Рахунок з печаткою"
+msgstr "Рахунок (з печаткою)"
+
+#. module: biko_invoice_rahunok_pf
+#: model:ir.actions.report,print_report_name:biko_invoice_rahunok_pf.biko_invoice_rahunok
+#:  
+#: model:ir.actions.report,print_report_name:biko_invoice_rahunok_pf.biko_invoice_rahunok_w_stamp
+msgid ""
+"f'Рахунок № {object.name} від {object.invoice_date.strftime(\"%d.%m.%Y\")}'"
+msgstr ""
+"f'Рахунок № {object.name} від {object.invoice_date.strftime(\"%d.%m.%Y\")}'"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid "Акт надання послуг <br/>№"
+msgstr "Акт надання послуг <br/>№"
 
 #. module: biko_invoice_rahunok_pf
 #: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
@@ -257,6 +436,30 @@ msgid "До сплати:"
 msgstr "До сплати:"
 
 #. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid ""
+"ЗАТВЕРДЖУЮ\n"
+"                        <br/>\n"
+"                        <br/>"
+msgstr ""
+"ЗАТВЕРДЖУЮ\n"
+"                        <br/>\n"
+"                        <br/>"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid ""
+"ЗАТВЕРДЖУЮ\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <br/>"
+msgstr ""
+"ЗАТВЕРДЖУЮ\n"
+"                        <br/>\n"
+"                        <br/>\n"
+"                        <br/>"
+
+#. module: biko_invoice_rahunok_pf
 #: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
 msgid "КРЕДИТ рах. N"
 msgstr "КРЕДИТ рах. N"
@@ -272,12 +475,18 @@ msgid "Код банку"
 msgstr "Код банку"
 
 #. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid "Ми, що нижче підписалися, представники Замовника"
+msgstr "Ми, що нижче підписалися, представники Замовника"
+
+#. module: biko_invoice_rahunok_pf
 #: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
 msgid "Одержувач"
 msgstr "Одержувач"
 
 #. module: biko_invoice_rahunok_pf
-#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+#:  model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
 msgid "Разом:"
 msgstr "Разом:"
 
@@ -316,9 +525,20 @@ msgstr ""
 "паспорта."
 
 #. module: biko_invoice_rahunok_pf
-#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+#:  model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
 msgid "від"
 msgstr "від"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid "код за ЄДРПОУ"
+msgstr "код за ЄДРПОУ"
+
+#. module: biko_invoice_rahunok_pf
+#: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_invoice_akt_template
+msgid "код за ДРФО"
+msgstr "код за ДРФО"
 
 #. module: biko_invoice_rahunok_pf
 #: model_terms:ir.ui.view,arch_db:biko_invoice_rahunok_pf.biko_rahunok_invoice
