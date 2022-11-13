@@ -1,9 +1,14 @@
-# Печатная форма счета для документа Invoice
+# Печатная форма счета и акта для документа Invoice
 
-Пример формы
+Счет
 
-![](./static/description/2022-11-10_20-13.png)
+![](./static/description/invoice.png)
+
+Акт
+![](./static/description/akt.png)
 
 ## CHANGELOG
 ### 14.0.1.1.0
 [ADD] - создание модуля
+### 14.0.1.1.1
+[ADD] - добавление ПФ акта

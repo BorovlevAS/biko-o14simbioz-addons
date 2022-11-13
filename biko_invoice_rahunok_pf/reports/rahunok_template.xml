@@ -180,14 +180,12 @@
                             <b>Ціна
                             </b>
                         </td>
-                        <td name="th_price_unit" t-if="display_discount" t-attf-class="text-right {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                        <td name="th_discount" t-if="display_discount" t-attf-class="text-right {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
                             <span>Знижка.%</span>
                         </td>
-                        <t t-if = "display_tax">
-                            <td name="th_price_unit">
-                                <span>ПДВ</span>
-                            </td>
-                        </t>
+                        <td name="th_tax" t-if="display_tax" t-attf-class="text-right {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                            <span>ПДВ</span>
+                        </td>
                         <td name="th_subtotal" class="text-center">
                             <b>Сума</b>
                         </td>

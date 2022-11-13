@@ -30,6 +30,7 @@
                                        domain="[('parent_id','child_of',id),('id','!=', id)]"/>
                             </group>
                             <group>
+                                <field name="biko_partner_type"/>
                                 <field name="enterprise_code"/>
                                 <field name="tax_ident_number"/>
                                 <field name="payer_certificate_number"/>
