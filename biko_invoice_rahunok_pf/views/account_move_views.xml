@@ -9,6 +9,7 @@
             <xpath expr="//group[@id='header_right_group']/div[@class='o_td_label']" position="before">
                 <field name="company_partner_id" invisible="1"/>
                 <field name="bank_id"/>
+                <field name="biko_akt_date"/>
             </xpath>
         </field>
     </record>

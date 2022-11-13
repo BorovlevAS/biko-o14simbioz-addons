@@ -57,7 +57,7 @@
                 </tr>
             </table>
             <br/><br/>
-            <strong style="font-size: 20px;">Акт надання послуг <br/>№ <span t-field="doc.name"/> від <span t-field="doc.invoice_date" t-options="{'format': 'dd MMMM YYYY'}"/></strong>
+            <strong style="font-size: 20px;">Акт надання послуг <br/>№ <span t-field="doc.name"/> від <span t-field="doc.biko_akt_date" t-options="{'format': 'dd MMMM YYYY'}"/></strong>
             <hr style="height:2px;border-width:0;color:gray;background-color:gray"/>
             <br/>
             <span>Ми, що нижче підписалися, представники Замовника <span t-field="doc.partner_id.legal_short_name"/>, з одного боку, і представник
