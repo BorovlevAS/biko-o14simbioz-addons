@@ -8,6 +8,7 @@ _logger = logging.getLogger(__name__)
 class Partner(models.Model):
     _inherit = 'res.partner'
 
+    biko_partner_type = fields.Selection([('FOP', 'FOP'), ('TOV', 'Enterprise')])
     legal_name = fields.Char(
         string='Legal full name', translate=True, )
     legal_short_name = fields.Char(

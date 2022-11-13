@@ -71,3 +71,8 @@ class AccountMove(models.Model):
         doc_num = self.name
         doc_date = self.invoice_date.strftime("%d.%m.%Y")
         return f'Рахунок № {doc_num} від {doc_date}'
+
+    def biko_get_akt_filename(self):
+        doc_num = self.name
+        doc_date = self.invoice_date.strftime("%d.%m.%Y")
+        return f'Акт № {doc_num} від {doc_date}'

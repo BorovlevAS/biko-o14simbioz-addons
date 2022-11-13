@@ -1,0 +1,301 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="biko_invoice_akt_template">
+        <t t-call="web.basic_layout">
+            <table width="100%" border="0">
+                <tr>
+                    <td width="50%">
+                        ЗАТВЕРДЖУЮ
+                        <br/>
+                        <br/>
+                        <br/>
+                        <t t-if="doc.company_id.partner_id.legal_short_name">
+                            <span t-field="doc.company_id.partner_id.legal_short_name"/>
+                        </t>
+                        <t t-else="">
+                            <span t-field="doc.company_id.partner_id.name"/>
+                        </t>
+                        <br/>
+                        <br/>
+                        _____________________________<br/>
+                        <br/>
+                        <t t-if="doc.company_id.stamp_image and print_with_stamp">
+                            <span>
+                                <img style="max-height:5cm; max-width:5cm; position: absolute; left: 0px; top: 30px;"
+                                    t-att-src="'data:image/png;base64,%s' % to_text(doc.company_id.stamp_image)"/>
+                            </span>
+                        </t>
+                    </td>
+                    <td width="50%">
+                        ЗАТВЕРДЖУЮ
+                        <br/>
+                        <br/>
+                        <t t-if="doc.partner_id.chief">
+                            <span t-field="doc.partner_id.chief.function"/><br/>
+                        </t>
+                        <t t-else="">
+                            <br/>
+                        </t>
+                        <t t-if="doc.partner_id.legal_short_name">
+                            <span t-field="doc.partner_id.legal_short_name"/>
+                        </t>
+                        <t t-else="">
+                            <span t-field="doc.partner_id.name"/>
+                        </t>
+                        <br/>
+                        <br/>
+                        _____________________________<br/>
+                        <br/>
+                        <t t-if="doc.partner_id.chief">
+                            <span t-field="doc.partner_id.chief.lastname"/> <span t-field="doc.partner_id.chief.firstname"/><br/>
+                        </t>
+                        <t t-else="">
+                            <br/>
+                        </t>
+                    </td>
+                </tr>
+            </table>
+            <br/><br/>
+            <strong style="font-size: 20px;">Акт надання послуг <br/>№ <span t-field="doc.name"/> від <span t-field="doc.invoice_date" t-options="{'format': 'dd MMMM YYYY'}"/></strong>
+            <hr style="height:2px;border-width:0;color:gray;background-color:gray"/>
+            <br/>
+            <span>Ми, що нижче підписалися, представники Замовника <span t-field="doc.partner_id.legal_short_name"/>, з одного боку, і представник
+                Виконавця ФОП Боровльов А. С., з іншого боку, склали цей акт про те, що Виконавцем 
+                були виконані наступні роботи (надані такі послуги):
+            </span>
+            <br/><br/>
+
+            <style>
+                #o_main_table td, #o_main_table th,
+                #o_sub_table td, #o_sub_table th {
+                padding: 0px 10px;
+                }
+            </style>
+            <style>
+                #o_main_table td {
+                padding: 0px 10px;
+                border: 1px solid black;
+                }
+            </style>
+
+            <t t-set="display_discount" t-value="any(l.discount for l in doc.invoice_line_ids)"/>
+            <t t-set="display_tax" t-value="any(l.tax_ids for l in doc.invoice_line_ids)"/>
+
+            <table width="100%" id="o_main_table"
+                   class="table table-sm o_main_table" border="1"
+                   cellspacing="0"
+                   cellpadding="2" style="border-collapse: collapse;">
+                <thead style="display: table-row-group; background-color: rgba(0, 0, 0, 0.082);">
+                    <tr>
+                        <td name="th_number" align="center"><strong>№</strong><br/></td>
+                        <td name="th_name" align="center"><strong>Найменування робіт, послуг</strong></td>
+                        <td name="th_qty" align="center"><strong>Кількість</strong></td>
+                        <td name="th_uom" align="center"><strong>Од.</strong></td>
+                        <td name="th_price" align="center"><strong>Ціна</strong></td>
+                        <td name="th_discount" t-if="display_discount" t-attf-class="text-right {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                            <span><strong>Знижка.%</strong></span>
+                        </td>
+                        <td name="th_tax" t-if="display_tax" t-attf-class="text-right {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                            <span><strong>ПДВ</strong></span>
+                        </td>
+                        <td name="th_subtotal" class="text-center">
+                            <span><strong>Сума</strong></span>
+                        </td>
+                    </tr>
+                </thead>
+                <tbody class="sale_tbody">
+                    
+                    <t t-set="current_subtotal" t-value="0"/>
+                    <t t-set="current_row_number" t-value="0"/>
+                    <t t-set="lines" t-value="doc.invoice_line_ids.sorted(key=lambda l: (-l.sequence, l.date, l.move_name, -l.id), reverse=True)"/>
+                    <t t-foreach="lines" t-as="line">
+                        
+                        <t t-set="current_subtotal"
+                           t-value="current_subtotal + line.price_subtotal"
+                           groups="account.group_show_line_subtotals_tax_excluded"/>
+                        <t t-set="current_subtotal"
+                           t-value="current_subtotal + line.price_total"
+                           groups="account.group_show_line_subtotals_tax_included"/>
+
+                        <tr t-att-class="'bg-200 font-weight-bold o_line_section' if line.display_type == 'line_section' else 'font-italic o_line_note' if line.display_type == 'line_note' else ''">
+                            <t t-if="not line.display_type and not line.price_unit == 0">
+                                <td name="td_number" align="center">
+                                    <t t-set="current_row_number"
+                                        t-value="current_row_number + 1"/>
+                                    <span t-raw="current_row_number"
+                                          style="text-indent:10px"/>
+                                </td>
+                                <td name="td_name">
+                                    <span t-field="line.name"
+                                          style="text-indent:10px"/>
+                                </td>
+                                <td name="td_quantity" class="text-right"
+                                    align="right">
+                                    <span t-field="line.quantity"/>
+                                </td>
+                                <td name="td_units" class="text-right"
+                                    align="center">
+                                    <span t-field="line.product_uom_id.name"/>
+                                </td>
+                                <td name="td_priceunit" class="text-right"
+                                    align="right">
+                                    <span t-field="line.price_unit"/>
+                                </td>
+                                <td t-if="display_discount" class="text-right"
+                                    align="right">
+                                    <span class="text-nowrap" t-field="line.discount"/>
+                                </td>
+                                <t t-if = "display_tax">
+                                    <td t-attf-class="text-left {{ 'd-none d-md-table-cell' if report_type == 'html' else '' }}">
+                                        <span t-esc="', '.join(map(lambda x: (x.description or x.name), line.tax_ids))" id="line_tax_ids"/>
+                                    </td>
+                                </t>
+                                <td name="td_subtotal"
+                                    class="text-right o_price_total"
+                                    align="right">
+                                    <span t-esc="'{:10.2f}'.format(line.price_subtotal).replace('.',',')"
+                                          groups="account.group_show_line_subtotals_tax_excluded"/>
+                                    <span t-esc="'{:10.2f}'.format(line.price_total).replace('.',',')"
+                                          groups="account.group_show_line_subtotals_tax_included"/>
+                                </td>
+                            </t>
+                            <t t-if="line.display_type == 'line_section'">
+                                <td name="td_section_line" colspan="99">
+                                    <span t-field="line.name"/>
+                                </td>
+                                <t t-set="current_section" t-value="line"/>
+                                <t t-set="current_subtotal" t-value="0"/>
+                            </t>
+                            <t t-if="line.display_type == 'line_note'">
+                                <td name="td_note_line" colspan="99">
+                                    <span t-field="line.name"/>
+                                </td>
+                            </t>
+                        </tr>
+
+                        <t t-if="current_section and (line_last or doc.order_line[line_index+1].display_type == 'line_section')">
+                            <tr class="is-subtotal text-right">
+                                <td name="td_section_subtotal" colspan="99">
+                                    <strong class="mr16">Підсумок</strong>
+                                    <span
+                                            t-esc="current_subtotal"
+                                            t-options='{"widget": "monetary", "display_currency": doc.pricelist_id.currency_id}'
+                                    />
+                                </td>
+                            </tr>
+                        </t>
+                    </t>
+                    
+                </tbody>
+            </table>
+            <table id="o_sub_table" width="100%">
+                <tr>
+                    <td align="right">Разом:</td>
+                    <td align="right" width="17%">
+                        <span t-esc="'{:10.2f}'.format(doc.amount_untaxed).replace('.',',')"/>
+                    </td>
+                </tr>
+            </table>
+            <br/>
+            <div>
+                <span>Загальна вартість робіт (послуг) склала:</span>
+                <t t-if="doc.payment_state != 'invoicing_legacy'">
+                    <span t-field="doc.kw_amount_ukr_text"/><br/>
+                </t>
+                <span>Замовник претензій по об'єму, якості та строкам виконання робіт (надання послуг) не має.<br/></span>
+                <br/>
+                <span>Місце складання:   м. Львів<br/></span>
+            </div>
+            <hr style="height:2px;border-width:0;color:gray;background-color:gray"/>
+            <br/>
+            <table width="100%" border="0">
+                <tr>
+                    <td width="50%">
+                        <div style="position: relative;">
+                            <span><b>Від Виконавця*</b></span>
+                            <br/><br/>
+                            _______________________<br/>
+                            <t t-if="doc.company_id.stamp_image and print_with_stamp">
+                                <span>
+                                    <img style="max-height:5cm; max-width:5cm; position: absolute; left: 0px; top: -30px;"
+                                        t-att-src="'data:image/png;base64,%s' % to_text(doc.company_id.stamp_image)"/>
+                                </span>
+                            </t>
+                        </div>
+                        <br/>
+                        <span style="font-size: 8px; vertical-align: top;">* Відповідальний за здійснення господарської операції і правильність її оформлення<br/></span>
+                        <b><span t-field="doc.invoice_date"/><br/></b>
+                        <t t-if="doc.company_id.partner_id.legal_short_name">
+                            <span t-field="doc.company_id.partner_id.legal_short_name"/>
+                        </t>
+                        <t t-else="">
+                            <span t-field="doc.partner_id.name"/>
+                        </t>
+                        <br/>
+                        <t t-if='doc.company_id.partner_id.biko_partner_type == "FOP"'>
+                            код за ДРФО
+                        </t>
+                        <t t-else="">
+                            код за ЄДРПОУ
+                        </t>
+                        <span t-field="doc.company_id.partner_id.enterprise_code"/><br/>
+                        р/р <span t-field="doc.bank_id.acc_number"/><br/>
+                        Банк <span t-field='doc.bank_id.bank_id.name'/><br/>
+                        МФО <span t-field="doc.bank_id.bank_id.bic"/><br/>
+                        юр. адреса <span t-field="doc.company_id.partner_id.legal_address.name"/><br/>
+                        <span t-field="doc.company_id.partner_id.kw_taxation_scheme_id"/><br/>
+                    </td>
+                    <td width="50%">
+                        <span><b>Від Замовника</b></span>
+                        <br/><br/>
+                        _______________________<br/>
+                        <br/>
+                        <br/>
+                        <b><span t-field="doc.invoice_date"/><br/></b>
+                        <t t-if="doc.partner_id.legal_short_name">
+                            <span t-field="doc.partner_id.legal_short_name"/>
+                        </t>
+                        <t t-else="">
+                            <span t-field="doc.partner_id.name"/>
+                        </t>
+                        <br/>
+                        <t t-if='doc.partner_id.biko_partner_type == "FOP"'>
+                            код за ДРФО
+                        </t>
+                        <t t-else="">
+                            код за ЄДРПОУ
+                        </t>
+                        <span t-field="doc.partner_id.enterprise_code"/><br/>
+                        юр. адреса <span t-field="doc.partner_id.legal_address.name"/><br/>
+                        <span t-field="doc.partner_id.kw_taxation_scheme_id"/><br/>
+                        <br/>
+                        <br/>
+                        <br/>
+                    </td>
+                </tr>
+            </table>
+        </t>
+    </template>
+
+    <template id="biko_invoice_akt">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-set="print_with_stamp" t-value="False"/>
+                <t t-call="biko_invoice_rahunok_pf.biko_invoice_akt_template"
+                   t-lang="doc.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+
+    <template id="biko_invoice_akt_ws">
+        <t t-call="web.html_container">
+            <t t-foreach="docs" t-as="doc">
+                <t t-set="print_with_stamp" t-value="True"/>
+                <t t-call="biko_invoice_rahunok_pf.biko_invoice_akt_template"
+                   t-lang="doc.partner_id.lang"/>
+            </t>
+        </t>
+    </template>
+
+</odoo>
