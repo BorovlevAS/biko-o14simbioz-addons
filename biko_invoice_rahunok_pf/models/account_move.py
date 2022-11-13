@@ -16,6 +16,7 @@ class AccountMove(models.Model):
     company_partner_id = fields.Many2one(related='company_id.partner_id', string = 'Our Partner')
     kw_amount_untaxed_ukr_text = fields.Char(compute = '_compute_kw_amount_untaxed_ukr_text')
     amount_residual_ukr_text = fields.Char(compute = '_compute_amount_residual_ukr_text')
+    biko_akt_date = fields.Date()
 
     @api.onchange('company_id')
     def _biko_onchange_company_id(self):
