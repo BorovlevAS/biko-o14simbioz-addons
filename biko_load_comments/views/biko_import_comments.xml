@@ -1,0 +1,14 @@
+<templates xml:space="preserve">
+
+    <t t-name="biko_batch.ImportCommentsMenu" owl="1">
+        <!-- <DropdownItem class="o_import_menu dropdown-item" t-on-click="importRecords">
+            Import comments
+        </DropdownItem> -->
+        <li class="o_menu_item o_import_menu" role="menuitem">
+            <button type="button" class="dropdown-item" t-on-click="importRecords">
+                Import comments
+            </button>
+        </li>
+    </t>
+
+</templates>

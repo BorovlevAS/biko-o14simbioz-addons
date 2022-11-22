@@ -1,0 +1,7 @@
+<odoo>
+    <template id="biko_load_comments_assets_backend" inherit_id="web.assets_backend" name="BIKO Load Comments Assets">
+        <xpath expr="." position="inside">
+            <script type="text/javascript" src="/biko_load_comments/static/src/js/biko_import_comments_menu.js"/>
+        </xpath>
+    </template>
+</odoo>
