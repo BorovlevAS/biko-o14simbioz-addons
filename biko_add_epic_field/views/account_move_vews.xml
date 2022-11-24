@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <record id="biko_account_move_view" model="ir.ui.view">
+        <field name="name">BIKO: add EPIC field</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>
+        <field name="arch" type="xml">
+            <field name="payment_reference" position="after">
+                <field name="biko_epic"/>
+            </field>
+        </field>
+    </record>
+
+     <record id="biko_view_invoice_tree_inherit" model="ir.ui.view">
+        <field name="name">BIKO: add EPIC field (tree)</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_invoice_tree"/>
+        <field name="arch" type="xml">
+            <field name="invoice_date_due" position="before">
+                <field name="biko_epic" optional="show"/>
+            </field>
+        </field>
+    </record>
+
+</odoo>
