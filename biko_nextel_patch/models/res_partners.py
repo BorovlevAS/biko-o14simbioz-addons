@@ -25,14 +25,14 @@ class ResPartner(models.Model):
 
     def _fill_e164_phone(self):
         for partner in self.with_context(active_test=False).search(
-            [("biko_phone_e164", "=", False), ("phone", "!=", False)]
+            [("phone", "!=", False)]
         ):
             biko_phone_e164 = partner.phone_format(partner.phone, raise_exception=False, force_format='E164')
             biko_phone_e164 = biko_phone_e164 if biko_phone_e164[0] != '+' else biko_phone_e164[1:]
             partner.update({'biko_phone_e164': biko_phone_e164})
 
         for partner in self.with_context(active_test=False).search(
-            [("biko_mobile_e164", "=", False), ("mobile", "!=", False)]
+            [("mobile", "!=", False)]
         ):
             biko_mobile_e164 = partner.phone_format(partner.mobile, raise_exception=False, force_format='E164')
             biko_mobile_e164 = biko_mobile_e164 if biko_mobile_e164[0] != '+' else biko_mobile_e164[1:]

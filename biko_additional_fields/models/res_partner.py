@@ -16,5 +16,5 @@ class ResPartner(models.Model):
         'Additional Email', compute='_compute_email_formatted',
         help='Format email address "Name <email@domain>"')
 
-    telegram = fields.Char(string = 'Telegram')
-    skype = fields.Char(string='Skype')
+    # telegram = fields.Char(string = 'Telegram')
+    # skype = fields.Char(string='Skype')
