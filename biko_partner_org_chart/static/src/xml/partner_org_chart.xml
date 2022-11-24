@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates id="template" xml:space="preserve">
+    <t t-name="biko_partner_org_chart_partner">
+        <div t-attf-class="biko_o_org_chart_entry biko_o_org_chart_entry_#{partner_type} media">
+            <t t-set="is_self" t-value="partner.id == view_partner_id"/>
+            <div class="biko_o_media_left">
+                <!-- NOTE: Since by the default on not squared images odoo add white borders,
+                    use bg-images to get a clean and centred images -->
+                <a t-if="!is_self"
+                   class="biko_o_media_object rounded-circle biko_o_partner_redirect"
+                   t-att-style="'background-image:url(\'/web/image/res.partner/' + partner.manager_id + '/image_1024\')'"
+                   t-att-alt="partner.name"
+                   t-att-data-partner-id="partner.id"
+                   t-att-href="partner.link"/>
+                <div t-if="is_self"
+                     class="biko_o_media_object rounded-circle"
+                     t-att-style="'background-image:url(\'/web/image/res.partner/' + partner.manager_id + '/image_1024\')'"/>
+            </div>
+
+            <div class="media-body">
+                <span t-if="partner.indirect_sub_count &gt; 0"
+                      class="biko_badge badge-pill"
+                      tabindex="0"
+                      data-trigger="focus"
+                      t-att-data-partner-name="partner.name"
+                      t-att-data-partner-id="partner.id"
+                      t-att-data-partner-dir-subs="partner.direct_sub_count"
+                      t-att-data-partner-ind-subs="partner.indirect_sub_count"
+                      data-toggle="popover">
+                    <t t-esc="partner.indirect_sub_count"/>
+                </span>
+
+                <t t-if="!is_self">
+                    <a t-att-href="partner.link" class="biko_o_partner_redirect" t-att-data-partner-id="partner.id">
+                        <h5 class="biko_o_media_heading"><b><t t-esc="partner.name"/></b></h5>
+                        <strong><t t-esc="partner.function"/></strong>
+                    </a>
+                    <div class="biko_media_phone">
+                        <t t-if="partner.phone">
+                            <a t-att-href="partner.phone_link">
+                                <span>Phone: <t t-esc="partner.phone"/></span>
+                            </a>
+                        </t>
+                    </div>
+                    <div class="biko_media_phone">
+                        <t t-if="partner.mobile">
+                            <a t-att-href="partner.mobile_link">
+                                <span>Mobile: <t t-esc="partner.mobile"/></span>
+                            </a>
+                        </t>
+                    </div>
+                </t>
+                <t t-if="is_self">
+                    <h5 class="biko_o_media_heading"><b><t t-esc="partner.name"/></b></h5>
+                    <strong><t t-esc="partner.function"/></strong>
+                </t>
+            </div>
+        </div>
+    </t>
+
+    <t t-name="biko_partner_org_chart">
+    <!-- NOTE: Desidered behaviour:
+            The maximun number of people is always 7 (including 'self'). Managers have priority over suburdinates
+            Eg. 1 Manager + 1 self = show just 5 subordinates (if availables)
+            Eg. 0 Manager + 1 self = show 6 subordinates (if available)
+
+        -->
+        <t t-set="partner_count" t-value="0"/>
+        <div t-if='parents.length &gt; 0' class="biko_o_org_chart_group_up">
+            <t t-if='parents_more'>
+                <div class="biko_o_org_chart_entry biko_o_org_chart_more media">
+                    <div class="biko_o_media_left">
+                        <a class="text-center biko_o_partner_more_parents"
+                           t-att-data-partner-id="parents[0].id">
+                            <i t-attf-class="fa fa-angle-double-up" role="img" aria-label="More parents" title="More parents"/>
+                        </a>
+                    </div>
+                </div>
+            </t>
+
+            <t t-foreach="parents" t-as="partner">
+                <t t-set="partner_count" t-value="partner_count + 1"/>
+                <t t-call="biko_partner_org_chart_partner">
+                    <t t-set="partner_type" t-value="'parent'"/>
+                </t>
+            </t>
+        </div>
+
+        <t t-if="children.length || parents.length" t-call="biko_partner_org_chart_partner">
+            <t t-set="partner_type" t-value="'self'"/>
+            <t t-set="partner" t-value="self"/>
+        </t>
+        <t t-if="!children.length &amp;&amp; !parents.length">
+            <div class="alert alert-info" role="alert">
+                <p><b>No hierarchy position.</b></p>
+                <p>This partner has no parents or children</p>
+                <p>In order to get an organigram, set a parent partner and save the record.</p>
+            </div>
+        </t>
+
+        <div t-if="children.length" class="biko_o_org_chart_group_down">
+            <t t-foreach="children" t-as="partner">
+                <t t-set="partner_count" t-value="partner_count + 1"/>
+                <t t-if="partner_count &lt; 20">
+                    <t t-call="biko_partner_org_chart_partner">
+                        <t t-set="partner_type" t-value="'sub'"/>
+                    </t>
+                </t>
+            </t>
+
+            <t t-if="(children.length + parents.length) &gt; 19">
+                <div class="biko_o_org_chart_entry biko_o_org_chart_more media">
+                    <div class="biko_o_media_left">
+                        <a href="#"
+                           t-att-data-partner-id="self.id"
+                           t-att-data-partner-name="self.name"
+                           class="biko_o_org_chart_show_more text-center biko_o_partner_sub_redirect">&#8230;</a>
+                    </div>
+                </div>
+            </t>
+        </div>
+    </t>
+
+    <t t-name="biko_partner_orgchart_popover">
+        <div class="popover biko_o_org_chart_popup" role="tooltip"><div class="arrow"></div><h3 class="popover-header"></h3><div class="popover-body"></div></div>
+    </t>
+
+    <t t-name="biko_partner_orgchart_popover_content">
+        <table class="table table-sm">
+            <thead>
+                <td class="text-right"><t t-esc="partner.direct_sub_count"/></td>
+                <td>
+                    <a href="#" class="biko_o_partner_sub_redirect" data-type='direct'
+                       t-att-data-partner-name="partner.name" t-att-data-partner-id="partner.id">
+                        <b>Direct subordinates</b></a>
+                </td>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="text-right">
+                        <t t-esc="partner.indirect_sub_count - partner.direct_sub_count"/>
+                    </td>
+                    <td>
+                        <a href="#" class="biko_o_partner_sub_redirect" data-type='indirect'
+                           t-att-data-partner-name="partner.name" t-att-data-partner-id="partner.id">
+                            Indirect subordinates</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="text-right"><t t-esc="partner.indirect_sub_count"/></td>
+                    <td>
+                        <a href="#" class="biko_o_partner_sub_redirect" data-type='total'
+                           t-att-data-partner-name="partner.name" t-att-data-partner-id="partner.id">
+                            Total</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </t>
+
+    <t t-name="biko_partner_orgchart_popover_title">
+        <div>
+            <span t-att-style="'background-image:url(\'/web/image/res.partner/' + partner.id + '/image_1024\')'"/>
+            <a href="#" class="float-right biko_o_partner_redirect" t-att-data-partner-id="partner.id"><i class="fa fa-external-link" role="img" aria-label='Redirect' title="Redirect"></i></a>
+            <b><t t-esc="partner.name"/></b>
+        </div>
+    </t>
+</templates>

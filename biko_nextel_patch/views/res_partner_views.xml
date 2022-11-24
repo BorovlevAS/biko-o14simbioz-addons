@@ -48,9 +48,6 @@
             <field name="mobile" position="after">
                 <field name="biko_mobile_e164" string="Mobile (E164)" widget="phone"/>
             </field>
-            <!-- <xpath expr="//field[@name='child_ids']/form" position="inside">
-                <field name="biko_phone_e164" widget="phone"/>
-            </xpath> -->
         </field>
     </record>
     

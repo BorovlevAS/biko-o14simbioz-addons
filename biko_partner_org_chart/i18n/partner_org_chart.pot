@@ -1,0 +1,194 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_org_chart
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-16 15:45+0000\n"
+"PO-Revision-Date: 2022-09-16 15:45+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_partner_org_chart_form
+msgid "Add Contact"
+msgstr ""
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "Address"
+msgstr ""
+
+#. module: partner_org_chart
+#: model:ir.actions.act_window,name:partner_org_chart.res_partner_child_action
+msgid "Child Partner"
+msgstr ""
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "City"
+msgstr ""
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "Contact / Address"
+msgstr ""
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "Contact Name"
+msgstr ""
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "Country"
+msgstr ""
+
+#. module: partner_org_chart
+#: model:ir.model.fields,help:partner_org_chart.field_res_partner__subordinate_ids
+#: model:ir.model.fields,help:partner_org_chart.field_res_users__subordinate_ids
+msgid "Direct and indirect subordinates"
+msgstr ""
+
+#. module: partner_org_chart
+#. openerp-web
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#, python-format
+msgid "Direct subordinates"
+msgstr ""
+
+#. module: partner_org_chart
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_partner__display_name
+msgid "Display Name"
+msgstr ""
+
+#. module: partner_org_chart
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_partner__id
+msgid "ID"
+msgstr ""
+
+#. module: partner_org_chart
+#. openerp-web
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#, python-format
+msgid ""
+"In order to get an organigram, set a parent partner and save the record."
+msgstr ""
+
+#. module: partner_org_chart
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_partner__child_all_count
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_users__child_all_count
+msgid "Indirect Subordinates Count"
+msgstr ""
+
+#. module: partner_org_chart
+#. openerp-web
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#, python-format
+msgid "Indirect subordinates"
+msgstr ""
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "Internal notes..."
+msgstr ""
+
+#. module: partner_org_chart
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr ""
+
+#. module: partner_org_chart
+#. openerp-web
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#, python-format
+msgid "More parents"
+msgstr ""
+
+#. module: partner_org_chart
+#. openerp-web
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#, python-format
+msgid "No hierarchy position."
+msgstr ""
+
+#. module: partner_org_chart
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_partner__parent_path
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_users__parent_path
+msgid "Parent Path"
+msgstr ""
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_partner_org_chart_form
+msgid "Partner Hierarchy"
+msgstr ""
+
+#. module: partner_org_chart
+#. openerp-web
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#, python-format
+msgid "Redirect"
+msgstr ""
+
+#. module: partner_org_chart
+#: model:ir.model,name:partner_org_chart.model_res_partner
+msgid "Res partner Sequences"
+msgstr ""
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "State"
+msgstr ""
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "Street 2..."
+msgstr ""
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "Street..."
+msgstr ""
+
+#. module: partner_org_chart
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_partner__subordinate_ids
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_users__subordinate_ids
+msgid "Subordinates"
+msgstr ""
+
+#. module: partner_org_chart
+#. openerp-web
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#, python-format
+msgid "This partner has no parents or children"
+msgstr ""
+
+#. module: partner_org_chart
+#. openerp-web
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#, python-format
+msgid "Total"
+msgstr ""
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "ZIP"
+msgstr ""
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "e.g. Mr."
+msgstr ""
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "e.g. Sales Director"
+msgstr ""
