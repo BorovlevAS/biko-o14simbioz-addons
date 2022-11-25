@@ -1,0 +1,200 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* partner_org_chart
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 14.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-09-16 15:45+0000\n"
+"PO-Revision-Date: 2022-10-18 16:39+0000\n"
+"Last-Translator: Weblate Admin <yura.khlon@gmail.com>\n"
+"Language-Team: Ukrainian <https://weblate.simbioz.com.ua/projects/"
+"simbioz_box/b24-partner_org_chart/uk/>\n"
+"Language: uk_UA\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: nplurals=3; plural=n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
+"X-Generator: Weblate 4.14.1\n"
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_partner_org_chart_form
+msgid "Add Contact"
+msgstr "Додати контакт"
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "Address"
+msgstr "Адреса"
+
+#. module: partner_org_chart
+#: model:ir.actions.act_window,name:partner_org_chart.res_partner_child_action
+msgid "Child Partner"
+msgstr "Дочірній контакт"
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "City"
+msgstr "Місто"
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "Contact / Address"
+msgstr "Контакт / Адреса"
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "Contact Name"
+msgstr "Назва контакту"
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "Country"
+msgstr "Країна"
+
+#. module: partner_org_chart
+#: model:ir.model.fields,help:partner_org_chart.field_res_partner__subordinate_ids
+#: model:ir.model.fields,help:partner_org_chart.field_res_users__subordinate_ids
+msgid "Direct and indirect subordinates"
+msgstr "Прямі та непрямі підлеглі"
+
+#. module: partner_org_chart
+#. openerp-web
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#, python-format
+msgid "Direct subordinates"
+msgstr "Прямі підлеглі"
+
+#. module: partner_org_chart
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_partner__display_name
+msgid "Display Name"
+msgstr "Відображувана назва"
+
+#. module: partner_org_chart
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_partner__id
+msgid "ID"
+msgstr "ID"
+
+#. module: partner_org_chart
+#. openerp-web
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#, python-format
+msgid ""
+"In order to get an organigram, set a parent partner and save the record."
+msgstr ""
+"Для того, щоб отримати органіграму, встановіть головного партнера і "
+"збережіть запис."
+
+#. module: partner_org_chart
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_partner__child_all_count
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_users__child_all_count
+msgid "Indirect Subordinates Count"
+msgstr "Кількість непрямих підлеглих"
+
+#. module: partner_org_chart
+#. openerp-web
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#, python-format
+msgid "Indirect subordinates"
+msgstr "Непрямі підлеглі"
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "Internal notes..."
+msgstr "Примітки..."
+
+#. module: partner_org_chart
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_partner____last_update
+msgid "Last Modified on"
+msgstr "Останні зміни на"
+
+#. module: partner_org_chart
+#. openerp-web
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#, python-format
+msgid "More parents"
+msgstr "Більше головних"
+
+#. module: partner_org_chart
+#. openerp-web
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#, python-format
+msgid "No hierarchy position."
+msgstr "Немає ієрархічної позиції."
+
+#. module: partner_org_chart
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_partner__parent_path
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_users__parent_path
+msgid "Parent Path"
+msgstr "Батьківський шлях"
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_partner_org_chart_form
+msgid "Partner Hierarchy"
+msgstr "Ієрархія клієнтів"
+
+#. module: partner_org_chart
+#. openerp-web
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#, python-format
+msgid "Redirect"
+msgstr "Перенаправлення"
+
+#. module: partner_org_chart
+#: model:ir.model,name:partner_org_chart.model_res_partner
+msgid "Res partner Sequences"
+msgstr "Послідовності клієнта"
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "State"
+msgstr "Стан"
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "Street 2..."
+msgstr "Вулиця 2..."
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "Street..."
+msgstr "Вулиця..."
+
+#. module: partner_org_chart
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_partner__subordinate_ids
+#: model:ir.model.fields,field_description:partner_org_chart.field_res_users__subordinate_ids
+msgid "Subordinates"
+msgstr "Підлеглі"
+
+#. module: partner_org_chart
+#. openerp-web
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#, python-format
+msgid "This partner has no parents or children"
+msgstr "Цей клієнт не має головних або підлеглих"
+
+#. module: partner_org_chart
+#. openerp-web
+#: code:addons/partner_org_chart/static/src/xml/partner_org_chart.xml:0
+#, python-format
+msgid "Total"
+msgstr "Всього"
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "ZIP"
+msgstr "Індекс"
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "e.g. Mr."
+msgstr "напр. Пан."
+
+#. module: partner_org_chart
+#: model_terms:ir.ui.view,arch_db:partner_org_chart.view_res_partner_child_form
+msgid "e.g. Sales Director"
+msgstr "напр. Комерційний директор"
