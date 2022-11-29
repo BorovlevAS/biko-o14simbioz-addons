@@ -7,7 +7,7 @@
     'license': 'OPL-1',
     'category': 'Localization',
 
-    'depends': ['kw_account_partner_requisites', 'contacts'],
+    'depends': ['kw_account_partner_requisites', 'contacts', 'biko_simbioz_requisites_patch'],
     'data': [
         'views/partner_view.xml',
     ],
