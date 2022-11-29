@@ -200,7 +200,7 @@
                            groups="account.group_show_line_subtotals_tax_included"/>
 
                         <tr t-att-class="'bg-200 font-weight-bold o_line_section' if line.display_type == 'line_section' else 'font-italic o_line_note' if line.display_type == 'line_note' else ''">
-                            <t t-if="not line.display_type and not line.price_unit == 0 and line.kw_is_added_to_so">
+                            <t t-if="not line.display_type and not line.price_unit == 0">
                                 <td name="td_number" align="center">
                                     <t t-set="current_row_number"
                                         t-value="current_row_number + 1"/>
