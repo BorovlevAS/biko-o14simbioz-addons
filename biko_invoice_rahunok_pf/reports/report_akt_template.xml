@@ -225,7 +225,7 @@
                         </div>
                         <br/>
                         <span style="font-size: 8px; vertical-align: top;">* Відповідальний за здійснення господарської операції і правильність її оформлення<br/></span>
-                        <b><span t-field="doc.invoice_date"/><br/></b>
+                        <b><span t-field="doc.biko_akt_date"/><br/></b>
                         <t t-if="doc.company_id.partner_id.legal_short_name">
                             <span t-field="doc.company_id.partner_id.legal_short_name"/>
                         </t>
@@ -252,7 +252,7 @@
                         _______________________<br/>
                         <br/>
                         <br/>
-                        <b><span t-field="doc.invoice_date"/><br/></b>
+                        <b><span t-field="doc.biko_akt_date"/><br/></b>
                         <t t-if="doc.partner_id.legal_short_name">
                             <span t-field="doc.partner_id.legal_short_name"/>
                         </t>
